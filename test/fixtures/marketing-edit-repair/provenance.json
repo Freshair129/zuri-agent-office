@@ -1,0 +1,17 @@
+{
+  "scope": "Frozen historical failure regression fixtures; not new inference results",
+  "files": {
+    "5.0.8-B.md": {
+      "source": "output/playwright/marketing-claim-bound-1791248635666/plain-B/task-B-output.md",
+      "sha256": "fb435bc888b959fe1bed63ecdbcc668c537d7297687b696037741615d1e5f41c"
+    },
+    "5.0.7-A.md": {
+      "source": "output/playwright/marketing-isolation-1791247321616/plain-A/task-A-output.md",
+      "sha256": "096ca7aa79f800710d240fc3fa13fa2e14c7715d59ab5030196ae82a2a22b0c9"
+    },
+    "context.md": {
+      "source": "output/playwright/marketing-isolation-1791247321616/project/.agents/product-marketing.md",
+      "sha256": "5b061db2782a7d76725cfca02202a11737948dc97a058c2e867261c1ea792ce3"
+    }
+  }
+}

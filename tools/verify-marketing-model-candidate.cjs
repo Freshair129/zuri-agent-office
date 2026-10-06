@@ -12,10 +12,13 @@ const hash = text => crypto.createHash('sha256').update(text).digest('hex');
 const sha = p => hash(fs.readFileSync(p));
 const save = (p, value) => fs.writeFileSync(p, JSON.stringify(value, null, 2) + '\n', { flag: 'wx' });
 function assertCandidate(info, manifestDigest) {
-  assert.equal(info.candidate, '0.1.0'); assert.equal(info.snapshotVersion, '5.0.6');
+  assert.equal(info.candidate, '0.1.0'); assert.equal(info.snapshotVersion, info.editRepair ? '5.0.9' : info.claimBound ? '5.0.8' : info.taskIsolation ? '5.0.7' : '5.0.6');
+  if (info.editRepair) { assert.equal(info.editRepair, '0.1.0'); assert.ok(!info.claimBound && !info.taskIsolation); }
+  if (info.claimBound) { assert.equal(info.claimBound, '0.1.0'); assert.ok(!info.taskIsolation); }
+  if (info.taskIsolation) assert.equal(info.taskIsolation, '0.1.0');
   assert.equal(info.model, MODEL); assert.equal(info.modelDigest, DIGEST); assert.equal(manifestDigest, DIGEST);
   assert.equal(info.context, 32768); assert.equal(info.diagnosticMode, 'baseline');
-  assert.equal(info.outputContract, '0.1.0'); assert.equal(info.compatibility, true);
+  assert.equal(info.outputContract, info.editRepair ? '0.2.0' : '0.1.0'); assert.equal(info.compatibility, true);
   assert.equal(info.endpoint, 'http://127.0.0.1:11438/v1'); assert.equal(info.appEndpoint, 'http://127.0.0.1:11439/v1');
   assert.equal(info.appVersion, '0.5.1'); assert.equal(info.cliVersion, '1.18.34');
 }
@@ -28,13 +31,13 @@ function verify(info) {
   assert.deepEqual(read(path.join(info.dir, 'provider-control.json')), expected);
   return integrity;
 }
-function automaticGate(info, report, events, records, outputs) {
+function automaticGate(info, report, events, records, outputs, letters = ['A', 'B']) {
   assert.equal(report.result, 'AWAITING_CONTENT_AND_VISUAL_REVIEW');
   assert.ok(report.completedAt && report.ptyClosed && report.recorderClosed);
   assert.deepEqual(report.errors, []); assert.deepEqual(report.contamination, []);
   assert.equal(events.sessions.length, 1); assert.equal(events.sessions[0].id, report.sessionId);
   assert.equal(report.loadedModel?.digest, DIGEST); assert.equal(report.loadedModel?.context_length, 32768);
-  assert.deepEqual(report.tasks.map(t => t.task), ['A', 'B']);
+  assert.deepEqual(report.tasks.map(t => t.task), letters);
   const outputHashes = {};
   for (const task of report.tasks) {
     assert.equal(task.result, 'AUTOMATED_CHECKS_PASS');
@@ -109,7 +112,7 @@ async function main() {
     save(path.join(info.dir, 'candidate-controls.json'), { manifest: MANIFEST, manifestSha256: sha(MANIFEST), promptDifferences: differences, integrity: verify(info) });
     return;
   }
-  const info = read(receipt); await preflight(info);
+  const info = read(receipt); assert.ok(!info.taskIsolation && !info.claimBound && !info.editRepair, 'Use the dedicated Plain-only runner'); await preflight(info);
   if (process.argv[2] === '--plain') {
     comparison.claim(info.dir, 'candidate');
     fs.copyFileSync(__filename, path.join(info.dir, 'executed-candidate-plain.cjs'));
@@ -138,4 +141,4 @@ async function main() {
     zuri: fs.existsSync(path.join(dir, 'live-result.json')) ? read(path.join(dir, 'live-result.json')) : { result: 'FAIL', reason: 'Attempt consumed without final evidence' }, completedAt: new Date().toISOString() });
 }
 if (require.main === module) main().catch(error => { console.error(error.stack); process.exitCode = 1; });
-module.exports = { assertCandidate, automaticGate, reviewGate, verifyZuriGate };
+module.exports = { assertCandidate, automaticGate, reviewGate, verifyZuriGate, verify, preflight };

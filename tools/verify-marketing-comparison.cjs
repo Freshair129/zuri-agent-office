@@ -25,9 +25,9 @@ function isolatedEnv(dir, inherited = process.env) {
     TEMP: path.join(dir, 'temp'), TMP: path.join(dir, 'temp'), BUN_INSTALL_CACHE_DIR: path.join(dir, 'cli/bun-cache'),
     OPENCODE_DISABLE_MODELS_FETCH: '1', OPENCODE_DISABLE_AUTOUPDATE: '1' };
 }
-function permissionConfig(dir) {
-  return { '*': 'deny', read: { '*': 'deny', '.agents/product-marketing.md': 'allow', '.qa-skills/**': 'allow', '../zuri/harness/**': 'allow' },
-    glob: 'allow', list: 'allow', external_directory: { '*': 'deny', [slash(path.join(dir, 'project')) + '/**']: 'allow', [slash(path.join(dir, 'zuri/harness')) + '/**']: 'allow' },
+function permissionConfig(dir, taskIsolation = false) {
+  return { '*': 'deny', read: { '*': 'deny', '.agents/product-marketing.md': 'allow', '.qa-skills/**': 'allow', ...(taskIsolation ? { '.qa-drafts/task-A.md': 'allow' } : { '../zuri/harness/**': 'allow' }) },
+    glob: 'allow', list: 'allow', external_directory: { '*': 'deny', [slash(path.join(dir, 'project')) + '/**']: 'allow', ...(!taskIsolation ? { [slash(path.join(dir, 'zuri/harness')) + '/**']: 'allow' } : {}) },
     edit: 'deny', bash: 'deny', webfetch: 'deny', websearch: 'deny', task: 'deny' };
 }
 function claim(dir, name) { fs.writeFileSync(path.join(dir, name + '.attempt'), new Date().toISOString(), { flag: 'wx' }); }
@@ -43,13 +43,13 @@ async function bounded(label, predicate, timeout = 300000) {
 }
 function verifyInputs(info) {
   assert.equal(info.comparison, '0.1.0');
-  assert.ok(path.resolve(info.dir).startsWith(path.join(root, 'output/playwright/' + (info.candidate ? 'marketing-candidate-' : 'marketing-comparison-'))));
+  assert.ok(path.resolve(info.dir).startsWith(path.join(root, 'output/playwright/' + (info.editRepair ? 'marketing-edit-repair-' : info.claimBound ? 'marketing-claim-bound-' : info.taskIsolation ? 'marketing-isolation-' : info.candidate ? 'marketing-candidate-' : 'marketing-comparison-'))));
   assert.equal(sha(cli), info.cliSha256);
   assert.equal(sha(path.join(path.dirname(info.appExe), 'resources/app.asar')), info.asarSha256);
   const migrations = [];
   for (const [p, hash] of Object.entries(info.inputHashes)) {
     const actual = sha(p);
-    if (actual !== hash && p === path.join(info.dir, 'plain/cli/config/opencode/opencode.json')) {
+    if (actual !== hash && (info.editRepair ? ['plain-candidate', 'plain-correction'] : info.claimBound ? ['plain-B'] : info.taskIsolation ? ['plain-A', 'plain-B'] : ['plain']).some(arm => p === path.join(info.dir, arm, 'cli/config/opencode/opencode.json'))) {
       const original = path.join(info.dir, 'provider-control.json');
       assert.equal(sha(original), hash, 'Original provider control changed');
       schemaMetadataOnly(read(p), read(original));
@@ -58,11 +58,18 @@ function verifyInputs(info) {
   }
   const source = read(path.join(root, 'output/thinking-0.5.1-source.json'));
   let count = 0;
-  for (const [p, hash] of Object.entries(source.files)) if (!p.startsWith('tools/')) { assert.equal(sha(path.join(root, p)), hash, 'Product input changed: ' + p); count++; }
-  return { unchangedProductInputs: count, inputFiles: Object.keys(info.inputHashes).length, asarUnchanged: true, migrations };
+  const sourceUpdates = [];
+  for (const [p, hash] of Object.entries(source.files)) if (!p.startsWith('tools/')) {
+    const actual = sha(path.join(root, p));
+    if ((info.taskIsolation || info.claimBound || info.editRepair) && p === 'UPSTREAM.md' && actual === 'cb9051570e12e2e7c4979726be6b13e3c0400cc905463ca30724d70780f755b9')
+      sourceUpdates.push({ file: p, originalSha256: hash, observedSha256: actual, change: 'Approved public-source publication metadata; app unchanged' });
+    else { assert.equal(actual, hash, 'Product input changed: ' + p); count++; }
+  }
+  return { unchangedProductInputs: count, inputFiles: Object.keys(info.inputHashes).length, asarUnchanged: true, migrations, ...(info.taskIsolation || info.claimBound || info.editRepair ? { sourceUpdates } : {}) };
 }
 function loadArmReceipt(file) {
   const current = read(receipt);
+  assert.ok(!current.taskIsolation && !current.claimBound && !current.editRepair, 'Plain-only experiments have no Zuri arm');
   verifyInputs(current);
   if (current.candidate) require('./verify-marketing-model-candidate.cjs').verifyZuriGate(current);
   assert.equal(path.resolve(file), path.join(current.dir, 'zuri/run-receipt.json'));
@@ -76,12 +83,15 @@ function loadArmReceipt(file) {
   claim(info.dir, 'runner');
   return info;
 }
-async function prepare({ candidate = false } = {}) {
+async function prepare({ candidate = false, taskIsolation = false, claimBound = false } = {}) {
+  assert.ok([candidate, taskIsolation, claimBound].filter(Boolean).length <= 1, 'Select one experiment');
   assert.ok(!await live.portInUse(11438) && !await live.portInUse(11439), 'Stop prior QA services first');
   const previous = read(receipt);
-  assert.equal(previous.snapshotVersion, candidate ? '5.0.5' : '5.0.4', 'Only one preparation is authorized');
-  const dir = path.join(root, 'output/playwright/' + (candidate ? 'marketing-candidate-' : 'marketing-comparison-') + Date.now());
-  for (const sub of ['project/.agents', 'temp', 'ollama-home', ...['plain', 'zuri'].flatMap(a => ['profile/temp', 'cli/config/opencode', 'cli/data', 'cli/cache', 'temp'].map(p => a + '/' + p))]) fs.mkdirSync(path.join(dir, sub), { recursive: true });
+  assert.equal(previous.snapshotVersion, claimBound ? '5.0.7' : taskIsolation ? '5.0.6' : candidate ? '5.0.5' : '5.0.4', 'Only one preparation is authorized');
+  if (claimBound) require('./verify-marketing-claim-bound-editing.cjs').sourceEvidence(previous);
+  const dir = path.join(root, 'output/playwright/' + (claimBound ? 'marketing-claim-bound-' : taskIsolation ? 'marketing-isolation-' : candidate ? 'marketing-candidate-' : 'marketing-comparison-') + Date.now());
+  const arms = claimBound ? ['plain-B'] : taskIsolation ? ['plain-A', 'plain-B'] : ['plain', 'zuri'];
+  for (const sub of ['project/.agents', 'temp', 'ollama-home', ...arms.flatMap(a => ['profile/temp', 'cli/config/opencode', 'cli/data', 'cli/cache', 'temp'].map(p => a + '/' + p))]) fs.mkdirSync(path.join(dir, sub), { recursive: true });
   const workspace = path.join(dir, 'project'), contextPath = path.join(workspace, '.agents/product-marketing.md');
   fs.copyFileSync(path.join(previous.dir, 'project/.agents/product-marketing.md'), contextPath);
   execFileSync('git', ['init', workspace], { stdio: 'ignore', windowsHide: true });
@@ -97,42 +107,49 @@ async function prepare({ candidate = false } = {}) {
     cliSha256: sha(cli), cliVersion: execFileSync(cli, ['--version'], { encoding: 'utf8', windowsHide: true }).trim(),
     contextPath, commonSkills, prompts: {}, inputHashes: {}, preparedAt: new Date().toISOString(), previousDir: previous.dir };
   assert.equal(info.cliVersion, '1.18.34');
-  if (candidate) Object.assign(info, { candidate: '0.1.0', snapshotVersion: '5.0.6', model: 'qwen3.5:9b', modelDigest: '6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7' });
+  if (candidate || taskIsolation || claimBound) Object.assign(info, { candidate: '0.1.0', snapshotVersion: claimBound ? '5.0.8' : taskIsolation ? '5.0.7' : '5.0.6', model: 'qwen3.5:9b', modelDigest: '6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7' });
+  if (taskIsolation) Object.assign(info, { taskIsolation: '0.1.0', draftPath: path.join(workspace, '.qa-drafts/task-A.md') });
+  if (claimBound) Object.assign(info, { claimBound: '0.1.0', draftPath: path.join(workspace, '.qa-drafts/task-A.md') });
   const provider = loadTs('src/shared/localProvider.ts').buildOpenCodeLocalConfig({ baseUrl: info.appEndpoint, model: info.model, autoMode: false, hasKey: false,
     localThinkingOverride: { baseUrl: info.appEndpoint, model: info.model, reasoningEffort: 'none' } });
-  save(path.join(workspace, 'opencode.json'), { $schema: 'https://opencode.ai/config.json', autoupdate: false, permission: permissionConfig(dir) });
-  save(path.join(dir, 'plain/cli/config/opencode/opencode.json'), provider);
+  save(path.join(workspace, 'opencode.json'), { $schema: 'https://opencode.ai/config.json', autoupdate: false, permission: permissionConfig(dir, taskIsolation || claimBound) });
+  const providerFiles = (taskIsolation || claimBound ? arms : ['plain']).map(arm => path.join(dir, arm, 'cli/config/opencode/opencode.json'));
+  for (const file of providerFiles) save(file, provider);
   save(path.join(dir, 'provider-control.json'), provider);
-  for (const letter of ['A', 'B']) {
+  for (const letter of claimBound ? ['B'] : ['A', 'B']) {
     const file = path.join(dir, `task-${letter}-prompt.txt`), skill = letter === 'A' ? 'copywriting' : 'copy-editing';
-    fs.writeFileSync(file, live.marketingPrompt(letter, contextPath, commonSkills['marketing:' + skill].path, instructions[letter], '0.1.0'));
+    const instruction = claimBound ? require('./verify-marketing-claim-bound-editing.cjs').editingInstruction(info.draftPath) : taskIsolation && letter === 'B' ? require('./verify-marketing-task-isolation.cjs').editingInstruction(info.draftPath) : instructions[letter];
+    fs.writeFileSync(file, live.marketingPrompt(letter, contextPath, commonSkills['marketing:' + skill].path, instruction, '0.1.0'));
     info.prompts[letter] = { path: file, sha256: sha(file) };
   }
-  for (const p of [contextPath, path.join(workspace, 'opencode.json'), path.join(dir, 'plain/cli/config/opencode/opencode.json'), ...Object.values(info.prompts).map(p => p.path)]) info.inputHashes[p] = sha(p);
+  for (const p of [contextPath, path.join(workspace, 'opencode.json'), ...providerFiles, ...Object.values(info.prompts).map(p => p.path)]) info.inputHashes[p] = sha(p);
   const bundle = path.dirname(path.dirname(path.dirname(provisioned.entries[0].path)));
   const provenance = read(path.join(bundle, 'receipt.json'));
   for (const p of Object.keys(provenance.files)) { const file = path.join(bundle, p); assert.equal(sha(file), provenance.files[p]); info.inputHashes[file] = sha(file); }
+  if (claimBound) require('./verify-marketing-claim-bound-editing.cjs').prepareInputs(info, previous);
   info.integrity = verifyInputs(info);
   save(path.join(dir, 'previous-receipt.json'), previous); save(path.join(dir, 'run-receipt.json'), info); save(receipt, info);
   console.log(JSON.stringify({ result: 'PREPARED', dir, serverStarted: false, integrity: info.integrity }));
   return info;
 }
-async function plain(info) {
-  const dir = path.join(info.dir, 'plain'), workspace = path.join(info.dir, 'project');
+async function plain(info, isolatedLetter) {
+  assert.ok(info.editRepair ? isolatedLetter === 'B' && !info.taskIsolation && !info.claimBound && ['candidate', 'correction'].includes(info.repairPhase) : info.claimBound ? isolatedLetter === 'B' && !info.taskIsolation : info.taskIsolation ? ['A', 'B'].includes(isolatedLetter) : isolatedLetter === undefined);
+  const arm = info.editRepair ? 'plain-' + info.repairPhase : isolatedLetter ? 'plain-' + isolatedLetter : 'plain';
+  const dir = path.join(info.dir, arm), workspace = path.join(info.dir, 'project');
   const database = path.join(dir, 'cli/data/opencode/opencode.db');
-  const report = { arm: 'plain', result: 'NOT_RUN', tasks: [], taskWindows: [], errors: [], startedAt: new Date().toISOString() };
+  const report = { arm, result: 'NOT_RUN', tasks: [], taskWindows: [], errors: [], startedAt: new Date().toISOString() };
   let terminal, recorder, phase = 'startup', exited = false, disposed = false, transcript = '';
   try {
     assert.ok(!fs.existsSync(path.join(info.dir, 'zuri/harness')), 'Plain must precede Hive creation');
-    recorder = await require('./marketing-wire-recorder.cjs').startRecorder({ file: path.join(dir, 'wire-metadata.jsonl'), mode: 'baseline', context: () => ({ arm: 'plain', phase, sessionId: report.sessionId || null }) });
-    claim(info.dir, 'plain');
+    recorder = await require('./marketing-wire-recorder.cjs').startRecorder({ file: path.join(dir, 'wire-metadata.jsonl'), mode: 'baseline', context: () => ({ arm, phase, sessionId: report.sessionId || null }) });
+    claim(info.dir, arm);
     terminal = require('node-pty').spawn(cli, ['--model', 'local/' + info.model], { cwd: workspace, env: isolatedEnv(dir), cols: 150, rows: 45, name: 'xterm-256color' });
     terminal.onExit(() => { exited = true; });
     terminal.onData(data => { transcript += data; fs.appendFileSync(path.join(dir, 'terminal.ansi.txt'), data); });
     await bounded('Plain interactive prompt', () => { if (exited) throw new Error('CLI exited before ready'); return /Ask anything/i.test(transcript.replace(/\x1b\[[0-?]*[ -/]*[@-~]/g, '')); });
     // TUI must be rendered, not merely a process successfully spawned.
     await delay(1000);
-    for (const letter of ['A', 'B']) {
+    for (const letter of isolatedLetter ? [isolatedLetter] : ['A', 'B']) {
       const prompt = fs.readFileSync(info.prompts[letter].path, 'utf8'), start = Date.now();
       phase = letter; report.taskWindows.push({ task: letter, start, promptSha256: sha(info.prompts[letter].path) });
       claim(dir, 'task-' + letter);
@@ -144,13 +161,16 @@ async function plain(info) {
         if (!observed.sessions.length) return false;
         report.sessionId ||= observed.sessions[0].id;
         assert.equal(report.sessionId, observed.sessions[0].id);
+        if ((info.taskIsolation || info.claimBound || info.editRepair) && isolatedLetter === 'B') assert.notEqual(report.sessionId, info.isolationPreviousSessionId, 'B must use a new session');
         return live.taskFinal(observed.events, { sessionId: report.sessionId, prompt, start, skillPath: info.commonSkills['marketing:' + (letter === 'A' ? 'copywriting' : 'copy-editing')].path,
-          contextPath: info.contextPath, marker: `QA_TASK_${letter}_DONE`, model: info.model, outputContract: info.outputContract, letter });
+          contextPath: info.contextPath, marker: `QA_TASK_${letter}_DONE`, model: info.model, outputContract: info.outputContract, letter,
+          ...(isolatedLetter === 'B' ? { draftPath: info.draftPath } : {}),
+          ...(info.editRepair ? { originalDraft: fs.readFileSync(info.draftPath, 'utf8'), contextText: fs.readFileSync(info.contextPath, 'utf8'), extraReadPaths: info.extraReadPaths || [] } : {}) });
       });
       report.taskWindows.at(-1).end = Date.now(); report.tasks.push({ task: letter, ...final });
       fs.writeFileSync(path.join(dir, `task-${letter}-output.md`), final.final);
       save(path.join(dir, 'live-result.json'), report);
-      if (letter === 'A' && !final.usableDraft) { report.tasks.push({ task: 'B', result: 'NOT_RUN', reason: 'A unusable' }); break; }
+      if (!isolatedLetter && letter === 'A' && !final.usableDraft) { report.tasks.push({ task: 'B', result: 'NOT_RUN', reason: 'A unusable' }); break; }
     }
     report.result = report.tasks.every(t => t.result === 'AUTOMATED_CHECKS_PASS') ? 'AWAITING_CONTENT_AND_VISUAL_REVIEW' : 'FAIL';
     const loaded = await (await fetch('http://127.0.0.1:11438/api/ps', { signal: AbortSignal.timeout(5000) })).json();

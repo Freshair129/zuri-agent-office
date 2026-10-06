@@ -1,12 +1,12 @@
 ---
-status: draft
+status: active
 superseded_by: null
 version: 0.1.0
 ---
 
-# Proposed fresh-session editing experiment
+# Fresh-session editing experiment
 
-Date: 2026-10-06 (Asia/Bangkok). C-2 / MEDIUM. Documentation proposal only; no new implementation or model sessions are authorized by this draft. App remains 0.5.1; proposed evidence snapshot 5.0.7.
+Date: 2026-10-06 (Asia/Bangkok). C-2 / MEDIUM. User approved this v0.1.0 plan with "approve" before implementation. App remains 0.5.1; proposed evidence snapshot 5.0.7.
 
 ## Evidence and uncertainty
 
@@ -39,4 +39,10 @@ Stop after the applicable one or two sessions, preserve all failures, update ver
 
 New proposed experiment v0.1.0. App 0.5.1 unchanged. Evidence 5.0.6 → 5.0.7 only after approval and execution. Prior candidate FAIL remains unchanged.
 
-Please review and approve this documentation. I will generate the code once approved.
+Approved on 2026-10-06 for the bounded QA implementation and conditional sessions above. No product adoption or additional sessions are authorized.
+
+Implementation detail: profiles `plain-A` and `plain-B` share the synthetic project; B additionally reads `.qa-drafts/task-A.md`. All write/shell/network/delegation permissions remain denied. The exact completed A text is copied only after its hash-bound manual review passes. The product baseline separately records the approved publication-only change to `UPSTREAM.md`; it does not silently accept other source changes.
+
+## Execution record
+
+Both permitted sessions completed once. A passed automatic and manual grounding checks; B used a different session, read all three required files and passed automatic checks, but failed manual grounding/edit review after adding unsupported product claims. The experiment is exhausted; no retry, third session or Zuri arm is authorized. See [verification](ZURI-MARKETING-TASK-ISOLATION-VERIFICATION.md) and [failure analysis](../.brain/rca/marketing-task-isolation-unsupported-claims.md).

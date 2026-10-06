@@ -166,7 +166,7 @@ function assessOutputContract(text, letter) {
     ...(letter === 'B' ? { exactlyTwoEdits: items.length === 2 && items[0][1] === '1' && items[1][1] === '2' &&
       items.every(item => item[2] === '.' && !!item[3].trim()) && /^1\.\s/.test(edits) } : {}) };
 }
-function taskFinal(events, { sessionId, prompt, start, skillPath, contextPath, marker, model, outputContract, letter }) {
+function taskFinal(events, { sessionId, prompt, start, skillPath, contextPath, marker, model, outputContract, letter, draftPath, originalDraft, contextText, extraReadPaths = [] }) {
   const users = events.filter(e => e.sessionId === sessionId && e.at >= start && e.message.role === 'user' && e.part.type === 'text' && e.part.text === prompt);
   const parents = [...new Set(users.map(e => e.messageId))];
   if (parents.length !== 1) return null;
@@ -188,7 +188,12 @@ function taskFinal(events, { sessionId, prompt, start, skillPath, contextPath, m
     sections: ['Headline', 'Subheading', 'CTA', 'Sources', 'unknowns'].every(s => text.toLowerCase().includes(s.toLowerCase())),
     exactCta: text.includes('View the demo'), marker: text.trimEnd().endsWith(marker),
     localModel: final.message.providerID === 'local' && final.message.modelID === model };
-  if (outputContract) Object.assign(checks, assessOutputContract(text, letter));
+  if (outputContract === '0.2.0') {
+    assert.equal(letter, 'B'); assert.equal(typeof originalDraft, 'string'); assert.equal(typeof contextText, 'string');
+    Object.assign(checks, require('./marketing-edit-contract.cjs').assess(text, originalDraft, contextText));
+    if (extraReadPaths.length) checks.correctionReads = extraReadPaths.every(readDone);
+  } else if (outputContract) Object.assign(checks, assessOutputContract(text, letter));
+  if (draftPath) checks.draftRead = readDone(draftPath);
   return { parentMessageId: parents[0], messageId: final.messageId, sessionId, final: text, finish: final.message.finish,
     providerID: final.message.providerID, modelID: final.message.modelID, checks, factuality: 'NOT_RUN',
     result: Object.values(checks).every(Boolean) ? 'AUTOMATED_CHECKS_PASS' : 'FAIL',
