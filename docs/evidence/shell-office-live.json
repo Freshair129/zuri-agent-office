@@ -1,0 +1,1529 @@
+{
+  "note": "Curated summary; the original raw manifest and every media hash are retained in Snapshot 4.0.0.",
+  "rawDirectory": "output/playwright/office-shell/after-1791200221061",
+  "manifestSha256": "d32ef23d329e573dae4d97f1c940113a27e2861d7c8346fa414295e45c0ef8c0",
+  "appVersion": "0.4.0",
+  "snapshotVersion": "4.0.0",
+  "runtime": {
+    "name": "Zuri",
+    "version": "0.4.0",
+    "isPackaged": true,
+    "electron": "32.3.3"
+  },
+  "sourceAtCapture": {
+    "head": "e15d98959b53bf7baf267e82c53c6184678fe683",
+    "workingTreeStatus": "M PRODUCT.md\n M README.md\n M docs/ZURI-UI.md\n M package-lock.json\n M package.json\n M src/main/index.ts\n M src/renderer/src/App.tsx\n M src/renderer/src/components/AgentStrip.tsx\n M src/renderer/src/components/CommandCenterPanel.tsx\n M src/renderer/src/components/SetupPanel.tsx\n M src/renderer/src/components/SidebarSplitter.tsx\n M src/renderer/src/i18n/locales/ar.json\n M src/renderer/src/i18n/locales/en.json\n M src/renderer/src/i18n/locales/zh-CN.json\n M src/renderer/src/scene/office/Character.ts\n M src/renderer/src/store/store.ts\n?? .brain/rca/UI-SHELL-LOCALE-COUNT.md\n?? .brain/rca/UI-SHELL-NAV-ACTIVE-TAB.md\n?? .brain/rca/UI-SHELL-WINDOW-BOUNDS.md\n?? .brain/rca/office-shell-qa-status-label.md\n?? .brain/rca/office-shell-qa-window-clamp.md\n?? docs/ZURI-OFFICE-SHELL-QA.md\n?? docs/ZURI-OFFICE-SHELL-VERIFICATION.md\n?? docs/ZURI-OFFICE-SHELL.md\n?? docs/design/office-shell-implementation.md\n?? docs/design/zuri-office-shell-reference.png\n?? docs/evidence/shell-build-inputs.json\n?? src/renderer/src/components/AgentDrawer.tsx\n?? src/renderer/src/components/OfficeSidebar.tsx\n?? src/renderer/src/design/officeShell.css\n?? test/office-shell-state.test.cjs\n?? tools/verify-office-shell.cjs",
+    "note": "Checkout evidence at capture time. Executed binary bytes are identified by ASAR hash; this does not infer a packaged source revision from a dirty checkout."
+  },
+  "buildInputsSha256": "1ef59469ab47cf0d6d7dba3c81ae4e6acce5df0862b3f1a1c3ef829fe8ed1048",
+  "asarSha256": "e886533f83f40fd424855983990fc70cadfd85aceb45738427bcb4dc118e2abc",
+  "asarSha256AtCompletion": "e886533f83f40fd424855983990fc70cadfd85aceb45738427bcb4dc118e2abc",
+  "runnerSha256": "073358723194fe67a31ea92f97b8b6ddb2013872b1e44ef58d9362b232f05cce",
+  "result": "PASS",
+  "startedAt": "2026-10-05T11:37:01.061Z",
+  "completedAt": "2026-10-05T11:40:22.615Z",
+  "errors": [],
+  "checks": {
+    "displayFixtures": [
+      {
+        "count": 1,
+        "scope": "1 displayed fixture agents; 1 actual counter PTY; 0 display-only; no LLM",
+        "firstWindowMs": 3940,
+        "fixtureReloadToSceneReadyMs": 1639,
+        "timing": {
+          "samples": 821,
+          "p50Ms": 10,
+          "p95Ms": 10.100000000000364,
+          "maxMs": 10.200000000000728,
+          "over50Ms": 0,
+          "terminalPackets": 41,
+          "note": "Renderer requestAnimationFrame cadence while office and real counter terminal are mounted. Video capture is active; no universal FPS pass threshold."
+        },
+        "movementObserved": true,
+        "controlledSeating": "PASS",
+        "thoughtPolicy": {
+          "result": "PASS",
+          "criticalStateObserved": false
+        },
+        "shell": {
+          "result": "PASS",
+          "widths": [
+            {
+              "width": 1440,
+              "height": 960,
+              "geometry": {
+                "viewport": 1440,
+                "pageWidth": 1440,
+                "drawer": {
+                  "x": 1020,
+                  "right": 1440,
+                  "width": 420,
+                  "className": "zuri-agent-drawer"
+                }
+              },
+              "before": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 6
+              },
+              "hidden": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 18
+              },
+              "reopened": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 32
+              }
+            },
+            {
+              "width": 1280,
+              "height": 800,
+              "geometry": {
+                "viewport": 1280,
+                "pageWidth": 1280,
+                "drawer": {
+                  "x": 860,
+                  "right": 1280,
+                  "width": 420,
+                  "className": "zuri-agent-drawer"
+                }
+              },
+              "before": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 36
+              },
+              "hidden": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 46
+              },
+              "reopened": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 59
+              }
+            },
+            {
+              "width": 1100,
+              "height": 760,
+              "geometry": {
+                "viewport": 1100,
+                "pageWidth": 1100,
+                "drawer": {
+                  "x": 668,
+                  "right": 1088,
+                  "width": 420,
+                  "className": "zuri-agent-drawer is-overlay"
+                }
+              },
+              "before": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 62
+              },
+              "hidden": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 72
+              },
+              "reopened": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 79
+              }
+            }
+          ],
+          "scope": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+          "lastGeometry": {
+            "requestedWidth": 1100,
+            "requestedHeight": 760,
+            "viewport": 1100,
+            "pageWidth": 1100,
+            "drawer": {
+              "x": 668,
+              "right": 1088,
+              "width": 420,
+              "className": "zuri-agent-drawer is-overlay"
+            }
+          },
+          "terminalPackets": 92,
+          "navigation": [
+            {
+              "name": "Tasks",
+              "result": "DISABLED_WITHOUT_COORDINATOR"
+            },
+            {
+              "name": "Ask me",
+              "result": "DISABLED_WITHOUT_COORDINATOR"
+            },
+            {
+              "name": "Team",
+              "result": "DISABLED_WITHOUT_COORDINATOR"
+            },
+            {
+              "name": "Memory",
+              "result": "DISABLED_WITHOUT_COORDINATOR"
+            },
+            {
+              "name": "Activity",
+              "result": "DISABLED_WITHOUT_COORDINATOR"
+            }
+          ]
+        }
+      },
+      {
+        "count": 16,
+        "scope": "16 displayed fixture agents; 1 actual counter PTY; 15 display-only; no LLM",
+        "firstWindowMs": 2109,
+        "fixtureReloadToSceneReadyMs": 1897,
+        "timing": {
+          "samples": 825,
+          "p50Ms": 10,
+          "p95Ms": 10.100000000000364,
+          "maxMs": 10.300000000000182,
+          "over50Ms": 0,
+          "terminalPackets": 40,
+          "note": "Renderer requestAnimationFrame cadence while office and real counter terminal are mounted. Video capture is active; no universal FPS pass threshold."
+        },
+        "movementObserved": true,
+        "controlledSeating": "PASS",
+        "thoughtPolicy": {
+          "result": "PASS",
+          "criticalStateObserved": true
+        },
+        "shell": {
+          "result": "PASS",
+          "widths": [
+            {
+              "width": 1440,
+              "height": 960,
+              "geometry": {
+                "viewport": 1440,
+                "pageWidth": 1440,
+                "drawer": {
+                  "x": 1020,
+                  "right": 1440,
+                  "width": 420,
+                  "className": "zuri-agent-drawer"
+                }
+              },
+              "before": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 6
+              },
+              "hidden": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 18
+              },
+              "reopened": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 32
+              }
+            },
+            {
+              "width": 1280,
+              "height": 800,
+              "geometry": {
+                "viewport": 1280,
+                "pageWidth": 1280,
+                "drawer": {
+                  "x": 860,
+                  "right": 1280,
+                  "width": 420,
+                  "className": "zuri-agent-drawer"
+                }
+              },
+              "before": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 36
+              },
+              "hidden": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 46
+              },
+              "reopened": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 60
+              }
+            },
+            {
+              "width": 1100,
+              "height": 760,
+              "geometry": {
+                "viewport": 1100,
+                "pageWidth": 1100,
+                "drawer": {
+                  "x": 668,
+                  "right": 1088,
+                  "width": 420,
+                  "className": "zuri-agent-drawer is-overlay"
+                }
+              },
+              "before": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 63
+              },
+              "hidden": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 74
+              },
+              "reopened": {
+                "canvasConnected": true,
+                "canvasSame": true,
+                "terminalConnected": true,
+                "terminalSame": true,
+                "selectedId": "office-fixture-1",
+                "packets": 80
+              }
+            }
+          ],
+          "scope": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+          "lastGeometry": {
+            "requestedWidth": 1100,
+            "requestedHeight": 760,
+            "viewport": 1100,
+            "pageWidth": 1100,
+            "drawer": {
+              "x": 668,
+              "right": 1088,
+              "width": 420,
+              "className": "zuri-agent-drawer is-overlay"
+            }
+          },
+          "terminalPackets": 93,
+          "navigation": [
+            {
+              "name": "Tasks",
+              "tab": "tasks",
+              "result": "PASS"
+            },
+            {
+              "name": "Ask me",
+              "tab": "ask me",
+              "result": "PASS"
+            },
+            {
+              "name": "Team",
+              "tab": "monitor",
+              "result": "PASS"
+            },
+            {
+              "name": "Memory",
+              "tab": "memory",
+              "result": "PASS"
+            },
+            {
+              "name": "Activity",
+              "tab": "activity",
+              "result": "PASS"
+            }
+          ],
+          "internalTabMirror": "PASS",
+          "prerequisiteDispatchSeed": {
+            "result": "PASS",
+            "seedLength": 747,
+            "submitted": false
+          }
+        }
+      },
+      {
+        "count": 17,
+        "scope": "17 displayed fixture agents; 1 actual counter PTY; 16 display-only; no LLM; bounded meeting-glass visibility phase, no repeated timing or principal-page suite",
+        "firstWindowMs": 2284,
+        "fixtureReloadToSceneReadyMs": 1953,
+        "controlledSeating": "PASS"
+      }
+    ],
+    "terminalElementPreserved": true,
+    "glass": {
+      "backdropFilter": "blur(16px) saturate(1.1)",
+      "background": "rgba(255, 255, 255, 0.88)"
+    },
+    "focusTrapSubviewAndIme": "PASS",
+    "exitInert": true,
+    "unsavedGuardAndFocusRestore": "PASS",
+    "reducedMountedCardTransform": "none",
+    "reducedMotion": "PASS",
+    "performance": {
+      "frames": 387,
+      "p95Ms": 10.100000000002183,
+      "maxMs": 30,
+      "over50Ms": 0,
+      "terminalPackets": 12
+    },
+    "editorInstancePreserved": "PASS"
+  },
+  "screens": [
+    {
+      "file": "01-fixture-1-entrance.png",
+      "name": "fixture-1-entrance",
+      "note": "1 displayed fixture agents; 1 actual counter PTY; 0 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:07.447Z",
+      "sha256": "c8debd6f9381fae00087b5fb3931fe2fa4ffb4ce6384ec6b2171006709ccf885"
+    },
+    {
+      "file": "02-fixture-1-after-navigation.png",
+      "name": "fixture-1-after-navigation",
+      "note": "1 displayed fixture agents; 1 actual counter PTY; 0 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:16.265Z",
+      "sha256": "952eb75cde234aebe7b60e67ae26bdb4bcb500192236639cc1079246bacbd69d"
+    },
+    {
+      "file": "03-fixture-1-light-1280x800.png",
+      "name": "fixture-1-light-1280x800",
+      "note": "1 displayed fixture agents; 1 actual counter PTY; 0 display-only; no LLM",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:37:17.388Z",
+      "sha256": "c6667304833918f12a1e0bd9d14ee842ac34520c5a3f1675c8ebf5de1b7ac042"
+    },
+    {
+      "file": "04-fixture-1-dark-1280x800.png",
+      "name": "fixture-1-dark-1280x800",
+      "note": "1 displayed fixture agents; 1 actual counter PTY; 0 display-only; no LLM",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:37:18.023Z",
+      "sha256": "b0c7459a503bc9431eb53e20884a430ce3ab08a7cd5888db1ad8348c8e3abff0"
+    },
+    {
+      "file": "05-fixture-1-light-1440x960.png",
+      "name": "fixture-1-light-1440x960",
+      "note": "1 displayed fixture agents; 1 actual counter PTY; 0 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:19.340Z",
+      "sha256": "caf262dc90a80553ff8430fb929382d782549d9384f3752e823d75b880250636"
+    },
+    {
+      "file": "06-fixture-1-dark-1440x960.png",
+      "name": "fixture-1-dark-1440x960",
+      "note": "1 displayed fixture agents; 1 actual counter PTY; 0 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:20.061Z",
+      "sha256": "104a2450902607cffd490a3326ee4ca3eeadb99c6e94c5ad587843408eac147d"
+    },
+    {
+      "file": "07-fixture-1-reduced-motion.png",
+      "name": "fixture-1-reduced-motion",
+      "note": "Reduced-motion media is active; screenshot is not proof of animation suppression.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:20.653Z",
+      "sha256": "d178071cda326fae3886d96861dca8181fcd1a73c9dbf15c3d770d6cce1f82ea"
+    },
+    {
+      "file": "08-fixture-1-synthetic-working-entry.png",
+      "name": "fixture-1-synthetic-working-entry",
+      "note": "CONTROLLED STATUS FIXTURE — not model work",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:21.351Z",
+      "sha256": "6633326107d0601762c7a706694b59e3cac03252e63576d363d6ddb558d6763b"
+    },
+    {
+      "file": "09-fixture-1-synthetic-seated.png",
+      "name": "fixture-1-synthetic-seated",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; visual alignment still requires review.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:26.911Z",
+      "sha256": "e191b86d4df651b8148955db48b3ef2de691825ea68fb45280bc834430493e85"
+    },
+    {
+      "file": "10-fixture-1-synthetic-seated-front-detail.png",
+      "name": "fixture-1-synthetic-seated-front-detail",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; front side; direct live UI clip.",
+      "width": 260,
+      "height": 210,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "clip": {
+        "x": 417,
+        "y": 365,
+        "width": 260,
+        "height": 210
+      },
+      "at": "2026-10-05T11:37:27.286Z",
+      "sha256": "cacb9dab9e571d822e63f075267d4bfa2d625fc2c3e4693c0e2c1170dbef0329"
+    },
+    {
+      "file": "11-fixture-1-actual-scene.png",
+      "name": "fixture-1-actual-scene",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; original complete canvas, temporary QA label hidden; no app content changed.",
+      "width": 802,
+      "height": 800,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "clip": {
+        "x": 208,
+        "y": 111,
+        "width": 802,
+        "height": 800
+      },
+      "at": "2026-10-05T11:37:27.853Z",
+      "sha256": "127b54716b26c484e213bb1c99d9a0aab1e9132b0e38c02fc06e8304e073d051"
+    },
+    {
+      "file": "12-fixture-1-reference-comparison.png",
+      "name": "fixture-1-reference-comparison",
+      "note": "Labeled evidence sheet displaying original reference and original live canvas screenshot; not a single app screenshot.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:29.241Z",
+      "sha256": "2e77b1b5528e5b63e5f9f0eb4172b769a9b7157d620db20163fe3b0c17d345c2"
+    },
+    {
+      "file": "13-shell-1-expanded-roster.png",
+      "name": "shell-1-expanded-roster",
+      "note": "Real compact roster disclosure; 16-agent fixture includes an intentionally long display name.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:32.390Z",
+      "sha256": "7a64e3b41fe2e138ff2dcf7f2f7267cf85326b6e4face7b02b32fb549620433d"
+    },
+    {
+      "file": "14-shell-1-drawer-open-light-1440x960.png",
+      "name": "shell-1-drawer-open-light-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:33.793Z",
+      "sha256": "a6f3ab3459d1f8abd08ccd99804c156aac7a13b6b8c5faa0be261de3d72ca0dc"
+    },
+    {
+      "file": "15-shell-1-drawer-open-dark-1440x960.png",
+      "name": "shell-1-drawer-open-dark-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:34.530Z",
+      "sha256": "2613c0861fedab2cfa63aa5d9d8e2ad77441fc9ddd16f8875356b835d1715175"
+    },
+    {
+      "file": "16-shell-1-drawer-closed-1440x960.png",
+      "name": "shell-1-drawer-closed-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:36.271Z",
+      "sha256": "f590339acbb8afbaa88adcc834893fdd6bf140e5961a732de8a2a5d95796daba"
+    },
+    {
+      "file": "17-shell-1-navigation-collapsed-1440x960.png",
+      "name": "shell-1-navigation-collapsed-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:38.311Z",
+      "sha256": "f6a70b9503bd5dd80f062ffa5a349818c86cf12baf1c549b385ca52ae21eb99d"
+    },
+    {
+      "file": "18-shell-1-drawer-open-light-1280x800.png",
+      "name": "shell-1-drawer-open-light-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:37:39.565Z",
+      "sha256": "68b85bd36d5752f561387d7baa60426cea754892c0aa133ef59914553c7d7bbf"
+    },
+    {
+      "file": "19-shell-1-drawer-open-dark-1280x800.png",
+      "name": "shell-1-drawer-open-dark-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:37:40.230Z",
+      "sha256": "8978f348900e53c4ad03980f7b54b474efca91030ffadbd0b635f911475aecbf"
+    },
+    {
+      "file": "20-shell-1-drawer-closed-1280x800.png",
+      "name": "shell-1-drawer-closed-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:37:41.683Z",
+      "sha256": "0bdedd657eec1ce919f561930216fcb367a7786dc0a8cf709be4a88423cd2887"
+    },
+    {
+      "file": "21-shell-1-navigation-collapsed-1280x800.png",
+      "name": "shell-1-navigation-collapsed-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:37:43.603Z",
+      "sha256": "75e5f2d7c38b657d59f6e52fdeef345c2726eeb1fb4ae5b8b207112eddf52663"
+    },
+    {
+      "file": "22-shell-1-drawer-open-light-1100x760.png",
+      "name": "shell-1-drawer-open-light-1100x760",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1100,
+      "height": 760,
+      "at": "2026-10-05T11:37:44.795Z",
+      "sha256": "a3be6546ceaa439f72832cceef2bce9e585cb45e6ac3ed5688e286bcc7a99ce1"
+    },
+    {
+      "file": "23-shell-1-drawer-open-dark-1100x760.png",
+      "name": "shell-1-drawer-open-dark-1100x760",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1100,
+      "height": 760,
+      "at": "2026-10-05T11:37:45.414Z",
+      "sha256": "da92d3a2dbfa9389d4d9c2d4dfca912a5c164c80ca7b4a00b929f06c144b55d2"
+    },
+    {
+      "file": "24-shell-1-drawer-closed-1100x760.png",
+      "name": "shell-1-drawer-closed-1100x760",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1100,
+      "height": 760,
+      "at": "2026-10-05T11:37:46.763Z",
+      "sha256": "35c4bcefdad51bb259e61fb805378c0411850b6cf23d2b9572bf6ea4a03aaff9"
+    },
+    {
+      "file": "25-shell-1-reduced-motion.png",
+      "name": "shell-1-reduced-motion",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:48.129Z",
+      "sha256": "1d8898d43ec5866a24d17622fa2186438c555d3748b31d20327aebe1eb380e2c"
+    },
+    {
+      "file": "26-shell-1-reference-view.png",
+      "name": "shell-1-reference-view",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:48.722Z",
+      "sha256": "432a72ca77b5f43172bf8434c2ef82a0092e6aec0e1e2d9bf34816df1a34f9a0"
+    },
+    {
+      "file": "27-shell-1-reference-comparison.png",
+      "name": "shell-1-reference-comparison",
+      "note": "Labeled evidence sheet displaying original reference and original live canvas screenshot; not a single app screenshot.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:49.872Z",
+      "sha256": "196a2f4d404a757089028803bd13acb8949869e96a3a9b077490a71127c68e16"
+    },
+    {
+      "file": "28-fixture-16-entrance.png",
+      "name": "fixture-16-entrance",
+      "note": "16 displayed fixture agents; 1 actual counter PTY; 15 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:37:58.171Z",
+      "sha256": "a73e15d84160235300a8b718b78cbcab2316b4bd3d496a5a5bf8a5f2364083ec"
+    },
+    {
+      "file": "29-fixture-16-after-navigation.png",
+      "name": "fixture-16-after-navigation",
+      "note": "16 displayed fixture agents; 1 actual counter PTY; 15 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:07.075Z",
+      "sha256": "e9756e443a7ce9c5bd0d3f36971f4380cb93688ff2bc3dbd5ec843566c51f698"
+    },
+    {
+      "file": "30-fixture-16-light-1280x800.png",
+      "name": "fixture-16-light-1280x800",
+      "note": "16 displayed fixture agents; 1 actual counter PTY; 15 display-only; no LLM",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:38:08.255Z",
+      "sha256": "3d0f7b0815ee3182d2af4a40ec4b047e5d3ffbefe4c7dbf19d41c4e3f7957a6f"
+    },
+    {
+      "file": "31-fixture-16-dark-1280x800.png",
+      "name": "fixture-16-dark-1280x800",
+      "note": "16 displayed fixture agents; 1 actual counter PTY; 15 display-only; no LLM",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:38:08.933Z",
+      "sha256": "3261bf667868b49ef3eb397ce5e1aeb32e344d35b5ef77dc9629a942edd930e0"
+    },
+    {
+      "file": "32-fixture-16-light-1440x960.png",
+      "name": "fixture-16-light-1440x960",
+      "note": "16 displayed fixture agents; 1 actual counter PTY; 15 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:10.263Z",
+      "sha256": "29b166174c6d89aa85ec9fe6f2f43a6204dcdc2b745df663181b70359f650bbc"
+    },
+    {
+      "file": "33-fixture-16-dark-1440x960.png",
+      "name": "fixture-16-dark-1440x960",
+      "note": "16 displayed fixture agents; 1 actual counter PTY; 15 display-only; no LLM",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:11.024Z",
+      "sha256": "9ff1c4f947283b3ba4194875c19cd53d6e20b5a9f6bb13a638ca6948a1461c2d"
+    },
+    {
+      "file": "34-fixture-16-reduced-motion.png",
+      "name": "fixture-16-reduced-motion",
+      "note": "Reduced-motion media is active; screenshot is not proof of animation suppression.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:11.626Z",
+      "sha256": "c1b59f12e88ff95daea98b0132383de8b02a73a88ae20bd4328fbf1257f9d7a1"
+    },
+    {
+      "file": "35-fixture-16-synthetic-working-entry.png",
+      "name": "fixture-16-synthetic-working-entry",
+      "note": "CONTROLLED STATUS FIXTURE — not model work",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:12.362Z",
+      "sha256": "d350f953fa240e88ee5e28ac9b41be7f57fe1ca5751526ea2633fce13658f93c"
+    },
+    {
+      "file": "36-fixture-16-synthetic-seated.png",
+      "name": "fixture-16-synthetic-seated",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; visual alignment still requires review.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:22.017Z",
+      "sha256": "f7f991bee6e9a3fb3ba56d10a66434eab4a22f1d272bcc5f64fc58d505bd3f28"
+    },
+    {
+      "file": "37-fixture-16-synthetic-seated-front-detail.png",
+      "name": "fixture-16-synthetic-seated-front-detail",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; front side; direct live UI clip.",
+      "width": 260,
+      "height": 210,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "clip": {
+        "x": 339,
+        "y": 353,
+        "width": 260,
+        "height": 210
+      },
+      "at": "2026-10-05T11:38:22.458Z",
+      "sha256": "6a34e45ba505f21efe9f71691e4df3e3a05c11518b99c9f86560e299a4c990d8"
+    },
+    {
+      "file": "38-fixture-16-synthetic-seated-back-detail.png",
+      "name": "fixture-16-synthetic-seated-back-detail",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; back side; direct live UI clip.",
+      "width": 260,
+      "height": 210,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "clip": {
+        "x": 369,
+        "y": 293,
+        "width": 260,
+        "height": 210
+      },
+      "at": "2026-10-05T11:38:22.881Z",
+      "sha256": "78b76be20c9b31dfacaeafd24310097ad4c7dc6daaa00ed9c9156b66d6184f1c"
+    },
+    {
+      "file": "39-fixture-16-actual-scene.png",
+      "name": "fixture-16-actual-scene",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; original complete canvas, temporary QA label hidden; no app content changed.",
+      "width": 802,
+      "height": 800,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "clip": {
+        "x": 208,
+        "y": 111,
+        "width": 802,
+        "height": 800
+      },
+      "at": "2026-10-05T11:38:23.532Z",
+      "sha256": "547470a9efc8f84d75e16dfbcd32821584d43a04aab173783c1ccd4e3eae7ec2"
+    },
+    {
+      "file": "40-fixture-16-reference-comparison.png",
+      "name": "fixture-16-reference-comparison",
+      "note": "Labeled evidence sheet displaying original reference and original live canvas screenshot; not a single app screenshot.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:24.998Z",
+      "sha256": "c1ffe068dd423dca006636ec44d1c7b5fa1fc119ee8d85bf593d22adc55699df"
+    },
+    {
+      "file": "41-fixture-16-selected-and-critical-thoughts.png",
+      "name": "fixture-16-selected-and-critical-thoughts",
+      "note": "Controlled permission notification; not a real provider approval request.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:28.386Z",
+      "sha256": "456d77fefdbef17ed3254af709e862f69e6da10d5eecbd31c45c18ad0de1a531"
+    },
+    {
+      "file": "42-shell-16-expanded-roster.png",
+      "name": "shell-16-expanded-roster",
+      "note": "Real compact roster disclosure; 16-agent fixture includes an intentionally long display name.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:29.766Z",
+      "sha256": "f5ab9c7749e9bbbaf3e29a0816ee6334520aa192befb797e7ec34e42e213d4e6"
+    },
+    {
+      "file": "43-shell-16-drawer-open-light-1440x960.png",
+      "name": "shell-16-drawer-open-light-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:31.135Z",
+      "sha256": "0781715d986cb9468643c15770b82368c95088948ae940029a9a31c72eba3898"
+    },
+    {
+      "file": "44-shell-16-drawer-open-dark-1440x960.png",
+      "name": "shell-16-drawer-open-dark-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:31.887Z",
+      "sha256": "db00de3faa2ec8a36abe4b19dfb2d579de9cf99bd6b567f26e193df0a54ee9bf"
+    },
+    {
+      "file": "45-shell-16-drawer-closed-1440x960.png",
+      "name": "shell-16-drawer-closed-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:33.518Z",
+      "sha256": "026740cc858007fd3f1e550f5e2cb5bbff126ccc2496b86638aa173f67a316d8"
+    },
+    {
+      "file": "46-shell-16-navigation-collapsed-1440x960.png",
+      "name": "shell-16-navigation-collapsed-1440x960",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:35.555Z",
+      "sha256": "b119a761324bde50a52b43c6925f815d258f83cf9b9e3d2d1fb8b1d8f290adf2"
+    },
+    {
+      "file": "47-shell-16-drawer-open-light-1280x800.png",
+      "name": "shell-16-drawer-open-light-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:38:36.822Z",
+      "sha256": "bc64015c36bbabe6caf9f671997afbca6301b43421e12adc85c9928618e8e9fb"
+    },
+    {
+      "file": "48-shell-16-drawer-open-dark-1280x800.png",
+      "name": "shell-16-drawer-open-dark-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:38:37.532Z",
+      "sha256": "9e8994069b3d55806b77020183235db832627fa07daddb65a362f0cc582bc12a"
+    },
+    {
+      "file": "49-shell-16-drawer-closed-1280x800.png",
+      "name": "shell-16-drawer-closed-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:38:39.014Z",
+      "sha256": "ceb8355a46e350cd40c5332ebdcaf669e2c16d30189a707161e2797ca8498ffb"
+    },
+    {
+      "file": "50-shell-16-navigation-collapsed-1280x800.png",
+      "name": "shell-16-navigation-collapsed-1280x800",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:38:40.977Z",
+      "sha256": "2aebf7d2007d1fd6adc1dfaa3fbdf07ccf1621e04f34468f25b71e97334d8079"
+    },
+    {
+      "file": "51-shell-16-drawer-open-light-1100x760.png",
+      "name": "shell-16-drawer-open-light-1100x760",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1100,
+      "height": 760,
+      "at": "2026-10-05T11:38:42.239Z",
+      "sha256": "81146e0fe4c99f216e4700bfcb4b3e37c3af527e17479c827e4e0b0e6f7a5f94"
+    },
+    {
+      "file": "52-shell-16-drawer-open-dark-1100x760.png",
+      "name": "shell-16-drawer-open-dark-1100x760",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1100,
+      "height": 760,
+      "at": "2026-10-05T11:38:42.915Z",
+      "sha256": "155a4730f461d9b6cb09fcc74f46fbd471885aed4c7376869e3adc8662353299"
+    },
+    {
+      "file": "53-shell-16-drawer-closed-1100x760.png",
+      "name": "shell-16-drawer-closed-1100x760",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1100,
+      "height": 760,
+      "at": "2026-10-05T11:38:44.338Z",
+      "sha256": "942cd57bd5ad1eb74d5092ec6c8cb287e57045994289b651d01660df8bf654dd"
+    },
+    {
+      "file": "54-shell-16-reduced-motion.png",
+      "name": "shell-16-reduced-motion",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:45.758Z",
+      "sha256": "765c6ff8da73f04cbdf7d77655a3d78ec9e18acb4ef326fe6710f34a0149bf52"
+    },
+    {
+      "file": "55-shell-16-reference-view.png",
+      "name": "shell-16-reference-view",
+      "note": "Actual UI actions; unsent draft and real local attachment, one-shot controlled native picker result; no model request",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:46.358Z",
+      "sha256": "a149f3d4427e2a4aa1512db4fb861171c9567e8d7e9489ae6f08d4a9dbb156ce"
+    },
+    {
+      "file": "56-shell-16-reference-comparison.png",
+      "name": "shell-16-reference-comparison",
+      "note": "Labeled evidence sheet displaying original reference and original live canvas screenshot; not a single app screenshot.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:47.560Z",
+      "sha256": "74362319f818ba784d7cf7465687bd09be48d03eaa907bbc2b2344aa52f04931"
+    },
+    {
+      "file": "57-shell-navigation-tasks.png",
+      "name": "shell-navigation-tasks",
+      "note": "Existing coordinator destination; no new task or model work submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:49.649Z",
+      "sha256": "89b8a0f763609f95dfd1571e5eb2b89b0829a0174f99a5a12fdf0feb6505f3c3"
+    },
+    {
+      "file": "58-shell-navigation-ask-me.png",
+      "name": "shell-navigation-ask-me",
+      "note": "Existing coordinator destination; no new task or model work submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:50.899Z",
+      "sha256": "49ac466c3c7124b350f0a13cb8282fcf5a743c4e5657a2f8fcf93002b6cd596b"
+    },
+    {
+      "file": "59-shell-navigation-team.png",
+      "name": "shell-navigation-team",
+      "note": "Existing coordinator destination; no new task or model work submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:52.297Z",
+      "sha256": "f4975ca26f165e9ebd883caca25f06d1cd7331c403e89dea88e41fcb62e0bbc7"
+    },
+    {
+      "file": "60-shell-navigation-memory.png",
+      "name": "shell-navigation-memory",
+      "note": "Existing coordinator destination; no new task or model work submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:53.679Z",
+      "sha256": "8e13b7d02d9b313e44e76eeea9f6a1079d401d823ef013c4b80718a0e4bda1fe"
+    },
+    {
+      "file": "61-shell-navigation-activity.png",
+      "name": "shell-navigation-activity",
+      "note": "Existing coordinator destination; no new task or model work submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:54.969Z",
+      "sha256": "e09576adbe0c5da0b458fed50d88a9456172842684bfe12e2b22da9648915b86"
+    },
+    {
+      "file": "62-shell-prerequisite-unsent-dispatch-seed.png",
+      "name": "shell-prerequisite-unsent-dispatch-seed",
+      "note": "Actual missing-tools helper; draft only, dispatch is never submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:38:58.557Z",
+      "sha256": "edae84a39bc9b1839e572c99b4ffee5ca6703d89c637569315134a8128da3d11"
+    },
+    {
+      "file": "63-fixture-17-synthetic-working-entry.png",
+      "name": "fixture-17-synthetic-working-entry",
+      "note": "CONTROLLED STATUS FIXTURE — not model work",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:07.010Z",
+      "sha256": "90ff76396aaf39938611fd84fb42cbdd6ed86542dfac0d3511daa14c4dc54337"
+    },
+    {
+      "file": "64-fixture-17-synthetic-seated.png",
+      "name": "fixture-17-synthetic-seated",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; visual alignment still requires review.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:18.432Z",
+      "sha256": "e790abbe1c2a789abcb9f45688650fb07bf819fa95156c4bdd0a06fcb09b8c3a"
+    },
+    {
+      "file": "65-fixture-17-meeting-glass-detail.png",
+      "name": "fixture-17-meeting-glass-detail",
+      "note": "CONTROLLED STATUS FIXTURE — not model work; actual overflow actor behind glass; direct live UI clip, visual gate NOT_REVIEWED.",
+      "width": 330,
+      "height": 202,
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "clip": {
+        "x": 511,
+        "y": 231,
+        "width": 330,
+        "height": 202
+      },
+      "at": "2026-10-05T11:39:18.842Z",
+      "sha256": "3da2e0296d8d5c7e09431217f1ab00a96655268d5a2e454c1d83f8cce1cb4d41"
+    },
+    {
+      "file": "66-agent-create-identity.png",
+      "name": "agent-create-identity",
+      "note": "Unsubmitted QA form.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:30.655Z",
+      "sha256": "fec5abc25c25d306798fc9b3b7b95bc84c7b15abbca5a9abc01b876efc4ebbee"
+    },
+    {
+      "file": "67-agent-create-workspace.png",
+      "name": "agent-create-workspace",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:31.245Z",
+      "sha256": "c819db5f20027dfa3e7be111407ebe2152ac5a4542894e97ab7f738dfe671b47"
+    },
+    {
+      "file": "68-agent-create-engine.png",
+      "name": "agent-create-engine",
+      "note": "Controlled local counter process, not an AI model.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:31.965Z",
+      "sha256": "285188fdf8943bb8a567d4e1579bb9ea6675ea092675e9b4e260266b4ad16bfb"
+    },
+    {
+      "file": "69-agent-create-briefing.png",
+      "name": "agent-create-briefing",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:32.560Z",
+      "sha256": "a8dd3847071e8ddcb2d3dd5ff6edc1a1e1cc281832f2ea2774104b7c957aded6"
+    },
+    {
+      "file": "70-agent-git.png",
+      "name": "agent-git",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:34.671Z",
+      "sha256": "63c947ed07b1c7116fa88ba7fa6c5bb5c3f4d6229f785788865553fbba3b5014"
+    },
+    {
+      "file": "71-agent-messages.png",
+      "name": "agent-messages",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:35.405Z",
+      "sha256": "6bad054e3a250e60bd5f09b20f5910807a6cf8683e4d52bc23353a199c7d9a61"
+    },
+    {
+      "file": "72-agent-traces.png",
+      "name": "agent-traces",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:36.120Z",
+      "sha256": "1ed87b31abbe373f86f495d60beadcd51f27b51eb38cd6830df3efaa3fcd32d2"
+    },
+    {
+      "file": "73-agent-terminal.png",
+      "name": "agent-terminal",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:36.884Z",
+      "sha256": "1f6447a2915b84b17f4a880afcdecc44ddc2ff327ba26f45103b010d97384f76"
+    },
+    {
+      "file": "74-office-light-1280x800.png",
+      "name": "office-light-1280x800",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:39:44.160Z",
+      "sha256": "0bde6b3a9c6fb29bba44e8c1528ebd64f742a9e4cb6d10c2d4844591851ab742"
+    },
+    {
+      "file": "75-settings-light-1280x800.png",
+      "name": "settings-light-1280x800",
+      "note": "",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:39:44.758Z",
+      "sha256": "3ca745c6d361ae2863742a9bd1cbcd5ac54696b65fcd1d1dc527b63c1a4f9bb2"
+    },
+    {
+      "file": "76-office-dark-1280x800.png",
+      "name": "office-dark-1280x800",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:39:45.561Z",
+      "sha256": "208a8526a76d270122deba1e6f53b53cd683fe382ea56dfb554e4772f09f6d32"
+    },
+    {
+      "file": "77-settings-dark-1280x800.png",
+      "name": "settings-dark-1280x800",
+      "note": "",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T11:39:46.111Z",
+      "sha256": "625e85fccd3252491b37f552fad19357a06f984653d1c38b65f1545990fc8f25"
+    },
+    {
+      "file": "78-office-light-1440x960.png",
+      "name": "office-light-1440x960",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:47.032Z",
+      "sha256": "82f5b19c962d34c7eb9a73196b62deeefd11677c4d1399020c8f51c5ab541980"
+    },
+    {
+      "file": "79-settings-light-1440x960.png",
+      "name": "settings-light-1440x960",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:47.680Z",
+      "sha256": "e2c4d734e1440b519efd127a7c19504ec119d55d2b125fe712a900fb8d4999fe"
+    },
+    {
+      "file": "80-office-dark-1440x960.png",
+      "name": "office-dark-1440x960",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:48.512Z",
+      "sha256": "5c22145c05aa7dad49f954b70ee45faafa2ccc7c6a9ebafa2b8e9d21db88ee8a"
+    },
+    {
+      "file": "81-settings-dark-1440x960.png",
+      "name": "settings-dark-1440x960",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:49.201Z",
+      "sha256": "57f837819913b9cc9a4d155fd0fc67ae68fcf7fdcd7f3343ae20b1b61666ce82"
+    },
+    {
+      "file": "82-settings-general.png",
+      "name": "settings-general",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:50.332Z",
+      "sha256": "d2f898ad909cbaa24893eaf60e2511590627bd75b183475dd01f2a91eac7fe12"
+    },
+    {
+      "file": "83-settings-general-bottom.png",
+      "name": "settings-general-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:50.806Z",
+      "sha256": "b665c8bc6881504dd6d9bd8a12ed045fd9bfab1b03a99490d66d2dbff762ef16"
+    },
+    {
+      "file": "84-settings-prerequisites.png",
+      "name": "settings-prerequisites",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:53.720Z",
+      "sha256": "e9583948cd55de1a9602abe0f0bf0a40382dc8182907c7e1269bd996f6d60aef"
+    },
+    {
+      "file": "85-settings-prerequisites-bottom.png",
+      "name": "settings-prerequisites-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:54.246Z",
+      "sha256": "cf25a51c6eacdabd588a5285a9794db6ce4c2271a78df4c3f1a58c28102faff1"
+    },
+    {
+      "file": "86-settings-agents-&-models.png",
+      "name": "settings-agents-&-models",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:57.140Z",
+      "sha256": "4159aa78e23b8c57a28cfee32cac99120ed0cc3ebe52227f1fd1a0cf77ffcca4"
+    },
+    {
+      "file": "87-settings-agents-&-models-bottom.png",
+      "name": "settings-agents-&-models-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:57.658Z",
+      "sha256": "efcb05d9f548d77f1b869ba78d7e65ccd6816bc4bd82f81bd26bb66e09bb4734"
+    },
+    {
+      "file": "88-settings-autonomy-&-budgets.png",
+      "name": "settings-autonomy-&-budgets",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:58.412Z",
+      "sha256": "26a78bb0ba7a987c06b9f5ebcdd873744604439f637bf400512f8df181269fe3"
+    },
+    {
+      "file": "89-settings-connections.png",
+      "name": "settings-connections",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:59.124Z",
+      "sha256": "982881cd4fd887221cf9c0a7ff58b415e1564a3ea568fad811a668012d4fd2f4"
+    },
+    {
+      "file": "90-settings-connections-bottom.png",
+      "name": "settings-connections-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:39:59.698Z",
+      "sha256": "b387ce4ec60469f04b3a1cbd933446133f25bd286cf498d8adb2badce3808591"
+    },
+    {
+      "file": "91-settings-voice.png",
+      "name": "settings-voice",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:00.488Z",
+      "sha256": "735be464b95a5310b6f461a9377e1467daffdfcd26171f8217c2819e6a229471"
+    },
+    {
+      "file": "92-settings-voice-bottom.png",
+      "name": "settings-voice-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:00.986Z",
+      "sha256": "2baa18fc1ff51463f416fc063bcae384616848b6209951d436bf29dcf121a45d"
+    },
+    {
+      "file": "93-settings-memory-&-knowledge.png",
+      "name": "settings-memory-&-knowledge",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:01.698Z",
+      "sha256": "480f65472ba2ded26e25ab30f9bce3f9697c3da641b371955870ee8f4ef0fd23"
+    },
+    {
+      "file": "94-agent-edit.png",
+      "name": "agent-edit",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:02.360Z",
+      "sha256": "adc6513d13cce19b7603576e67e36feda0d70a6d5ee0320fa4f1c5e8a2d2fe01"
+    },
+    {
+      "file": "95-ide-unsaved-draft.png",
+      "name": "ide-unsaved-draft",
+      "note": "QA file draft only; not saved to disk.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:03.441Z",
+      "sha256": "af30acdf5ea62884ca6ba640c4e33f549913cb593be0f97f3904503587204e67"
+    },
+    {
+      "file": "96-command-terminal.png",
+      "name": "command-terminal",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:04.824Z",
+      "sha256": "91ac93768109703f7d7f055f60815d3931f54b3b57bfc467828ea8f2c7a1d818"
+    },
+    {
+      "file": "97-command-monitor.png",
+      "name": "command-monitor",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:05.293Z",
+      "sha256": "7dedb818ad85cccd89dbe8ad518c6110955d048db53c6306e525f8ce3024c669"
+    },
+    {
+      "file": "98-command-tasks.png",
+      "name": "command-tasks",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:05.735Z",
+      "sha256": "0b5519880cf18efbc05469da80e00e6c2aee5d5e7df5888e03c0bdabce240ae2"
+    },
+    {
+      "file": "99-command-ask-me.png",
+      "name": "command-ask-me",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:06.187Z",
+      "sha256": "de93d48752cfba9ea91a449d9999c198cad1ee40ef26e4292c53e449eb0668cb"
+    },
+    {
+      "file": "100-command-triggers.png",
+      "name": "command-triggers",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:06.700Z",
+      "sha256": "315924ae35a5cc5b9cce6257e670af4b7166b4853570ce83d48c31198a03b7aa"
+    },
+    {
+      "file": "101-command-memory.png",
+      "name": "command-memory",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:07.196Z",
+      "sha256": "c76e52c4cdc2d3cb94bf8d3aa7ea760015181ecab37aec6e0dc28cb081427f3f"
+    },
+    {
+      "file": "102-command-graph.png",
+      "name": "command-graph",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:07.681Z",
+      "sha256": "ae5b1beb5614bb2c59569de0ad5b8d433ffa603c4c6cadfe68e7f096770c662a"
+    },
+    {
+      "file": "103-command-activity.png",
+      "name": "command-activity",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:08.132Z",
+      "sha256": "21c65ecd90429a3dbc255724ce62104f27b2bc8c3a5deaf73f6f3298d3a08d1d"
+    },
+    {
+      "file": "104-command-skills.png",
+      "name": "command-skills",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:08.753Z",
+      "sha256": "f79a9bd60187fb7a9381db3e901ec791bc83da99659e3113e9e9157fa2beb25d"
+    },
+    {
+      "file": "105-command-workers.png",
+      "name": "command-workers",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:09.198Z",
+      "sha256": "f1c9a338fa7ddc16a48884e75e7e7dc8dd44d380110c06ddbad9be0b1aee7e88"
+    },
+    {
+      "file": "106-onboarding-persona.png",
+      "name": "onboarding-persona",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:18.975Z",
+      "sha256": "b2bdfb254802c596adfaff848ff726cbbef3a00e51d4b9de45ebe1145c4262d4"
+    },
+    {
+      "file": "107-onboarding-overview.png",
+      "name": "onboarding-overview",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:19.433Z",
+      "sha256": "6916d6f4e385d4ee36e710308fac27c029545f5fe57c3ca1301c404f70c7ec74"
+    },
+    {
+      "file": "108-onboarding-workspace.png",
+      "name": "onboarding-workspace",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:19.886Z",
+      "sha256": "c34cd22f23b24af5f23455679da3ed83481405e23d1710ebe8bb2d2743cdc21c"
+    },
+    {
+      "file": "109-onboarding-local-engine.png",
+      "name": "onboarding-local-engine",
+      "note": "Example inputs; Finish is not submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:20.641Z",
+      "sha256": "1d9002d35af82580f0277ead05a404d808237b2713a03dc8ce9f4b71cbee8123"
+    },
+    {
+      "file": "110-onboarding-repositories.png",
+      "name": "onboarding-repositories",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:21.057Z",
+      "sha256": "86c544b83e70e9dbd1a4ef4fb0d18fe48a6ea862d148137e202a4a1ac67fa2c2"
+    },
+    {
+      "file": "111-onboarding-permissions.png",
+      "name": "onboarding-permissions",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T11:40:21.711Z",
+      "sha256": "25a5bcf7887af6863e5b0a38d41f80896da04d2fa750884d4e9b113cc1516839"
+    }
+  ],
+  "videos": [
+    {
+      "file": "video/page@35b5cbf97fe3ab4cff49920b8c25af5b.webm",
+      "sha256": "71002973f2ab7ca15ee5a0175f472ed9730aee9e17addfd29ecbe4ca9324f7f8"
+    },
+    {
+      "file": "video/page@35f5b25c59d3ab9dc15152b79cd80c30.webm",
+      "sha256": "c101b77259a39a563d58da551c711611d3598d9539ca033165e90b96dceae9e5"
+    },
+    {
+      "file": "video/page@690eb1bd4f62ed81ce8df93e78c6fc0c.webm",
+      "sha256": "c4a5399fe7af45d6f4d1611abb464c2e32ccddb619d37107f129125363a7e51f"
+    },
+    {
+      "file": "video/page@bc587b951f948d84bc8763f8a95dc604.webm",
+      "sha256": "7c13ad8fcb3856665aa314da9f8f7236105729dfb15a4b8d9ec0c380b83bfbd7"
+    },
+    {
+      "file": "video/page@bcc498221109ac46be8216d00b511333.webm",
+      "sha256": "25dbee5398ec3aa466028a35ce77ad45e534ec2545298387620932091510fcd2"
+    }
+  ],
+  "sessions": [
+    {
+      "profile": "fixture-1-profile",
+      "startedAt": "2026-10-05T11:37:04.200Z",
+      "video": "video/page@35b5cbf97fe3ab4cff49920b8c25af5b.webm"
+    },
+    {
+      "profile": "fixture-16-profile",
+      "startedAt": "2026-10-05T11:37:54.702Z",
+      "video": "video/page@bcc498221109ac46be8216d00b511333.webm"
+    },
+    {
+      "profile": "fixture-17-profile",
+      "startedAt": "2026-10-05T11:39:03.600Z",
+      "video": "video/page@bc587b951f948d84bc8763f8a95dc604.webm"
+    },
+    {
+      "profile": "profile",
+      "startedAt": "2026-10-05T11:39:23.950Z",
+      "video": "video/page@690eb1bd4f62ed81ce8df93e78c6fc0c.webm"
+    },
+    {
+      "profile": "onboarding-profile",
+      "startedAt": "2026-10-05T11:40:15.915Z",
+      "video": "video/page@35f5b25c59d3ab9dc15152b79cd80c30.webm"
+    }
+  ],
+  "visualReviewSha256": "dabc8b2385d096d9aa641a2d26667629a78ae7f242b3f47ef32b2922cd9fa120"
+}

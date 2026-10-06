@@ -1,0 +1,36 @@
+{
+  "generator": "built-in image_gen",
+  "date": "2026-10-05",
+  "assetVersion": "1.0.0",
+  "originalsUnmodified": true,
+  "prompts": [
+    {
+      "key": "desk",
+      "prompt": "Production asset for Zuri warm realistic miniature office, semi-photorealistic physically based 2.5D architectural diorama. Match pale oak wood grain, ivory, charcoal brushed metal, warm neutral fabric, restrained amber, soft natural daylight from upper left. Fixed orthographic isometric camera, ground axes slope +/-26.565 degrees, no perspective convergence. Highly detailed realistic materials, smooth antialiased edges, no pixel art, no low poly, no toy proportions. One complete isolated object only, fully visible, centered, modest transparent padding; genuine transparent background, no floor patch, no room, no text, no logos, no watermark. Small soft contact shadow only.\nOne single-person oak office workstation: light oak rectangular desktop with thin charcoal metal legs, realistic flat monitor with dark blank display, keyboard, mouse pad, notebook, tiny ceramic coffee cup. Desktop long edge runs from upper-left toward lower-right in isometric view. User sits at the near left-facing edge, looking toward upper-right. Display faces viewer toward lower-left. Include one empty ergonomic upholstered chair tucked at that near edge, no people. Furniture height/proportions realistic. Landscape composition."
+    },
+    {
+      "key": "meeting",
+      "prompt": "Production asset for Zuri warm realistic miniature office, semi-photorealistic physically based 2.5D architectural diorama. Match pale oak wood grain, ivory, charcoal brushed metal, warm neutral fabric, restrained amber, soft natural daylight from upper left. Fixed orthographic isometric camera, ground axes slope +/-26.565 degrees, no perspective convergence. Highly detailed realistic materials, smooth antialiased edges, no pixel art, no low poly, no toy proportions. One complete isolated object only, fully visible, centered, modest transparent padding; genuine transparent background, no floor patch, no room, no text, no logos, no watermark. Small soft contact shadow only.\nOne oak meeting table for four people with four upholstered warm beige and muted amber chairs neatly surrounding it, one small ceramic planter in center, a closed notebook and two water glasses. Natural fine-grain oak tabletop, refined dark slim legs. No room or glass walls, just table and chairs. Landscape composition."
+    },
+    {
+      "key": "counter",
+      "prompt": "Production asset for Zuri warm realistic miniature office, semi-photorealistic physically based 2.5D architectural diorama. Match pale oak wood grain, ivory, charcoal brushed metal, warm neutral fabric, restrained amber, soft natural daylight from upper left. Fixed orthographic isometric camera, ground axes slope +/-26.565 degrees, no perspective convergence. Highly detailed realistic materials, smooth antialiased edges, no pixel art, no low poly, no toy proportions. One complete isolated object only, fully visible, centered, modest transparent padding; genuine transparent background, no floor patch, no room, no text, no logos, no watermark. Small soft contact shadow only.\nOne compact warm oak coffee kitchenette module viewed from front-left isometric: long oak lower cabinetry with ivory stone counter, brushed metal sink and faucet on right, espresso machine on left, three ceramic mugs, small coffee tray, closed under-counter mini refrigerator. Back faces upper-right, working/front face lower-left. No tall backdrop, no walls. Landscape composition."
+    },
+    {
+      "key": "plant",
+      "prompt": "Production asset for Zuri warm realistic miniature office, semi-photorealistic physically based 2.5D architectural diorama. Pale oak wood grain, ivory, charcoal brushed metal, warm neutral upholstery, restrained amber, soft natural daylight from upper left. Fixed orthographic isometric camera, ground axes slope +/-26.565 degrees, no perspective convergence. Highly detailed realistic materials, smooth antialiased edges, no pixel art, no low poly. One complete isolated object only, fully visible, centered with minimal transparent padding; genuine transparent background, no floor patch, no room, no text, no logos, no watermark. Small contact shadow only, no large diffuse haze.\nOne realistic indoor broad-leaf fiddle-leaf fig plant about 1.5 metres tall in a warm ivory textured cylindrical ceramic planter. Individual leaves with veins and varied natural angles, realistic stem. Portrait composition, full plant and planter."
+    },
+    {
+      "key": "sofa",
+      "prompt": "Production asset for Zuri warm realistic miniature office, semi-photorealistic physically based 2.5D architectural diorama. Pale oak wood grain, ivory, charcoal brushed metal, warm neutral upholstery, restrained amber, soft natural daylight from upper left. Fixed orthographic isometric camera, ground axes slope +/-26.565 degrees, no perspective convergence. Highly detailed realistic materials, smooth antialiased edges, no pixel art, no low poly. One complete isolated object only, fully visible, centered with minimal transparent padding; genuine transparent background, no floor patch, no room, no text, no logos, no watermark. Small contact shadow only, no large diffuse haze.\nA refined compact two-seat sofa in textured oatmeal linen with oak feet, one amber throw pillow, one ivory pillow. View from front-left so sitting face points lower-left. No table, rug or props beyond sofa. Landscape composition."
+    },
+    {
+      "key": "cafe",
+      "prompt": "Production asset for Zuri warm realistic miniature office, semi-photorealistic physically based 2.5D architectural diorama. Pale oak wood grain, ivory, charcoal brushed metal, warm neutral upholstery, restrained amber, soft natural daylight from upper left. Fixed orthographic isometric camera, ground axes slope +/-26.565 degrees, no perspective convergence. Highly detailed realistic materials, smooth antialiased edges, no pixel art, no low poly. One complete isolated object only, fully visible, centered with minimal transparent padding; genuine transparent background, no floor patch, no room, no text, no logos, no watermark. Small contact shadow only, no large diffuse haze.\nOne small round pale oak cafe table with two upholstered muted amber lounge chairs on opposite sides. Two ceramic coffee mugs on the table and a tiny plant. View full table and chairs from above, no rug. Landscape composition."
+    },
+    {
+      "key": "floor-oak",
+      "prompt": "Create a high-resolution seamless tileable oak parquet wood floor texture photographed perfectly straight down, orthographic flat plane. Warm light natural oak as used in a realistic architectural miniature office. Long clean parallel planks, staggered end joints, subtle realistic fine grain and occasional restrained knots, matte oil finish, natural warm beige hues with minimal color variation. Uniform diffuse illumination, no directional shadows, no perspective, no objects, no border, no labels, no text, no gloss glare, no pixel art. Texture fills entire square image edge to edge."
+    }
+  ]
+}

@@ -1,0 +1,1313 @@
+{
+  "snapshotVersion": "1.1.0",
+  "startedAt": "2026-10-05T07:41:07.507Z",
+  "scope": "Packaged UI glass/motion; controlled shell output, no live model acceptance",
+  "checks": {
+    "terminalElementPreserved": true,
+    "glass": {
+      "backdropFilter": "blur(16px) saturate(1.1)",
+      "background": "rgba(255, 255, 255, 0.88)"
+    },
+    "focusTrapSubviewAndIme": "PASS",
+    "exitInert": true,
+    "unsavedGuardAndFocusRestore": "PASS",
+    "reducedMountedCardTransform": "none",
+    "reducedMotion": "PASS",
+    "performance": {
+      "frames": 225,
+      "p95Ms": 16.80000000000109,
+      "maxMs": 17,
+      "over50Ms": 0,
+      "terminalPackets": 10,
+      "dialogSamples": [
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 8)",
+          "opacity": "0"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 6.51601)",
+          "opacity": "0.202241"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 5.58711)",
+          "opacity": "0.465554"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 3.61311)",
+          "opacity": "0.657984"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 2.61597)",
+          "opacity": "0.778821"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 1.68389)",
+          "opacity": "0.853616"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 1.13578)",
+          "opacity": "0.901967"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.755909)",
+          "opacity": "0.934467"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.500481)",
+          "opacity": "0.956754"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.326296)",
+          "opacity": "0.97232"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.210797)",
+          "opacity": "0.983216"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.129818)",
+          "opacity": "0.990683"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.0659532)",
+          "opacity": "0.995475"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.0330343)",
+          "opacity": "0.998375"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.0109917)",
+          "opacity": "0.999756"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 0.0015427)",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 1.43438)",
+          "opacity": "0.822488"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 2.67158)",
+          "opacity": "0.480988"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 4.48363)",
+          "opacity": "0.265145"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 6.07461)",
+          "opacity": "0.152301"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 6.86422)",
+          "opacity": "0.08922"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 7.34013)",
+          "opacity": "0.051977"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 7.62231)",
+          "opacity": "0.0289226"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 7.78699)",
+          "opacity": "0.014727"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 7.89505)",
+          "opacity": "0.00634001"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 7.95494)",
+          "opacity": "0.00183088"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 7.9883)",
+          "opacity": "0.000100656"
+        },
+        {
+          "transform": "matrix(1, 0, 0, 1, 0, 7.99976)",
+          "opacity": "0"
+        }
+      ]
+    },
+    "editorInstancePreserved": "PASS"
+  },
+  "screens": [
+    {
+      "file": "01-agent-create-identity.png",
+      "name": "agent-create-identity",
+      "note": "Unsubmitted QA form.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:12.592Z",
+      "sha256": "0eca8280ac3a34208a8c6d283946613b042f170fcfff682e9a82c0f6bcae30d0"
+    },
+    {
+      "file": "02-agent-create-workspace.png",
+      "name": "agent-create-workspace",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:15.305Z",
+      "sha256": "8798fecd1012b8b8a9c3fed016c6ab32fa40496aed8065f5d12e5ccf28d38d46"
+    },
+    {
+      "file": "03-agent-create-engine.png",
+      "name": "agent-create-engine",
+      "note": "Controlled local counter process, not an AI model.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:15.945Z",
+      "sha256": "5b6625dd3c48f77ac3fe1135cb25b20a54579cf2fabb06d3aba7869def1b0ae2"
+    },
+    {
+      "file": "04-agent-create-briefing.png",
+      "name": "agent-create-briefing",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:16.497Z",
+      "sha256": "34721b65c3a0be0af3f68ad02a465c400d23508499014aa234926271663ee4c7"
+    },
+    {
+      "file": "05-agent-git.png",
+      "name": "agent-git",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:18.203Z",
+      "sha256": "651532e40de570a9e2da621be959fcdd6e96e9c59d857ce29c74a12cfa949840"
+    },
+    {
+      "file": "06-agent-messages.png",
+      "name": "agent-messages",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:18.723Z",
+      "sha256": "512347c713e255583c6d7ddf5915bf34d12ac2631d4beadff269b38243309974"
+    },
+    {
+      "file": "07-agent-traces.png",
+      "name": "agent-traces",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:19.265Z",
+      "sha256": "215d9a0f4145bc013f167b962789ecc7b372a8631ce6311efb66ea788cb9ac1d"
+    },
+    {
+      "file": "08-agent-terminal.png",
+      "name": "agent-terminal",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:19.799Z",
+      "sha256": "dd820db7c26c3fccd01d51dd4bdc6e5b64c7843000bc5689bad011d408864b34"
+    },
+    {
+      "file": "09-office-light-1280x800.png",
+      "name": "office-light-1280x800",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T07:41:25.826Z",
+      "sha256": "c2de7d8831883900b744ea2abac312638b9fa385fe12ad3dc9b11b3ffb1166b1"
+    },
+    {
+      "file": "10-settings-light-1280x800.png",
+      "name": "settings-light-1280x800",
+      "note": "",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T07:41:26.383Z",
+      "sha256": "97b977e4350b8b130baac4829fce960e07a7c929b958df17c9d2517171159fa7"
+    },
+    {
+      "file": "11-office-dark-1280x800.png",
+      "name": "office-dark-1280x800",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T07:41:27.049Z",
+      "sha256": "d315cfdac0342f8e5b12688ed975881b76956dabd2c31b41e22a0f9c9aad4db3"
+    },
+    {
+      "file": "12-settings-dark-1280x800.png",
+      "name": "settings-dark-1280x800",
+      "note": "",
+      "width": 1280,
+      "height": 800,
+      "at": "2026-10-05T07:41:27.657Z",
+      "sha256": "074d3b6dee3d115500bae20fac8cabf383e8421246d16c270b635c120295bac8"
+    },
+    {
+      "file": "13-office-light-1440x960.png",
+      "name": "office-light-1440x960",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:28.400Z",
+      "sha256": "7d197cbf7605d11c90edf88841c435cacbbe526027cbbe8c1856d13e5f7a22bb"
+    },
+    {
+      "file": "14-settings-light-1440x960.png",
+      "name": "settings-light-1440x960",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:28.997Z",
+      "sha256": "178620d591bdbb7d1a62afc6caaf24ee690e72be1a395fd2b2bd9b99bac3dbe6"
+    },
+    {
+      "file": "15-office-dark-1440x960.png",
+      "name": "office-dark-1440x960",
+      "note": "Controlled counter process is active; no model inference.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:29.650Z",
+      "sha256": "dd3eb5497222c184c89a3e9dcccbaa35f73d74021f59700e771b3cce83186ee4"
+    },
+    {
+      "file": "16-settings-dark-1440x960.png",
+      "name": "settings-dark-1440x960",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:30.278Z",
+      "sha256": "0d6aeae3d478b96918788d67a0c03543d121b7246e57b3f86e00fe388182bea1"
+    },
+    {
+      "file": "17-settings-general.png",
+      "name": "settings-general",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:31.684Z",
+      "sha256": "8d70e007b47138ed39ff99f4207043204edefa3b5273f5a78b8987fec54107d3"
+    },
+    {
+      "file": "18-settings-general-bottom.png",
+      "name": "settings-general-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:32.254Z",
+      "sha256": "71bd6d189652f7c1d54ee9925fe83c3d3c06e1a0c7bb9c527b1b55d8e5b0689c"
+    },
+    {
+      "file": "19-settings-prerequisites.png",
+      "name": "settings-prerequisites",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:35.066Z",
+      "sha256": "8af3b9070973897271c80eeda23da9b87b9983eb54dfa133d7ce81b433e46753"
+    },
+    {
+      "file": "20-settings-prerequisites-bottom.png",
+      "name": "settings-prerequisites-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:35.570Z",
+      "sha256": "375ab4333eece38d529ec0c19dc40dbd82ca5fd452c02021392f40e54d008186"
+    },
+    {
+      "file": "21-settings-agents-&-models.png",
+      "name": "settings-agents-&-models",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:37.814Z",
+      "sha256": "911b23f7e7df751d42bbe6644c01a537204e7055cab6c28d592167bf2d1b708c"
+    },
+    {
+      "file": "22-settings-agents-&-models-bottom.png",
+      "name": "settings-agents-&-models-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:38.308Z",
+      "sha256": "2acf5521b5c7ec4dc013f77563d2204da902953c7233aba8417d3d4e97fbff0e"
+    },
+    {
+      "file": "23-settings-autonomy-&-budgets.png",
+      "name": "settings-autonomy-&-budgets",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:38.914Z",
+      "sha256": "97ba2e59194481898d60f47e09e91155a5b423b48ba2c46a6e10500c6c34287c"
+    },
+    {
+      "file": "24-settings-connections.png",
+      "name": "settings-connections",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:39.495Z",
+      "sha256": "f74683b278a0285d3ec9634ed1bb082b6ef3da42d44de671f0d6db18b24260b6"
+    },
+    {
+      "file": "25-settings-connections-bottom.png",
+      "name": "settings-connections-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:40.000Z",
+      "sha256": "2c9af224cd6c29765c84fa7013f72d2c214251a2b2e73abc382581447bbedfca"
+    },
+    {
+      "file": "26-settings-voice.png",
+      "name": "settings-voice",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:40.559Z",
+      "sha256": "73abccd5735456c515be92976d9f2ba3aed0ecbed90951509598ab81fbd4ca56"
+    },
+    {
+      "file": "27-settings-voice-bottom.png",
+      "name": "settings-voice-bottom",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:41.060Z",
+      "sha256": "8fcb81c49617aabb65e98b80879814fe18bc33eeda6d53ae28551c19c01bfec0"
+    },
+    {
+      "file": "28-settings-memory-&-knowledge.png",
+      "name": "settings-memory-&-knowledge",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:41.643Z",
+      "sha256": "a3a1e917a6741acbaecfe10f10b85ea8a9d9fd61dfd3a5ff4ef070ae88d9f93f"
+    },
+    {
+      "file": "29-agent-edit.png",
+      "name": "agent-edit",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:42.226Z",
+      "sha256": "b09be99ca39ac15ec51c450d9bfaace7c99fd9c897345af8527874d27e484076"
+    },
+    {
+      "file": "30-ide-unsaved-draft.png",
+      "name": "ide-unsaved-draft",
+      "note": "QA file draft only; not saved to disk.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:43.127Z",
+      "sha256": "233f876467edded9c506aa317eb7677d0a4aae5e7ee001c26c33c71052fdebe4"
+    },
+    {
+      "file": "31-command-terminal.png",
+      "name": "command-terminal",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:44.010Z",
+      "sha256": "28d205575ed84b7d4dd14f1d874666e09250b3f32d80788f634f52ea25c6b6bb"
+    },
+    {
+      "file": "32-command-monitor.png",
+      "name": "command-monitor",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:44.505Z",
+      "sha256": "c2d860e2ce09d599aeeea05e98d49e8eb9e6d32e9724f8ca1d81de63454ac17b"
+    },
+    {
+      "file": "33-command-tasks.png",
+      "name": "command-tasks",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:44.968Z",
+      "sha256": "2387eaeb6c6548db779542e8f2825d3d33984104b7b0431bf776618bc5b154b1"
+    },
+    {
+      "file": "34-command-ask-me.png",
+      "name": "command-ask-me",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:45.423Z",
+      "sha256": "f3df494801c220775d44848122c4d6149d13a413139ef219af7527d5134c0fc4"
+    },
+    {
+      "file": "35-command-triggers.png",
+      "name": "command-triggers",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:45.883Z",
+      "sha256": "e09b5463ad318a6a78dcd2704c7a2919726f78e740bdae52c126c1fd6c38b9a0"
+    },
+    {
+      "file": "36-command-memory.png",
+      "name": "command-memory",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:46.327Z",
+      "sha256": "7404787e420e675f5c324eb8e486afc46ab8c697f054edda739d6de5752cf636"
+    },
+    {
+      "file": "37-command-graph.png",
+      "name": "command-graph",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:46.776Z",
+      "sha256": "cde5fc75bda25ee5d909b5fa94ba329ce2aa351b2a819dec81208f674219aacf"
+    },
+    {
+      "file": "38-command-activity.png",
+      "name": "command-activity",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:47.233Z",
+      "sha256": "3c453734ec8fc24e7c8efcb69b095adecc4333bd2162ef2c6c32a736acdfafe1"
+    },
+    {
+      "file": "39-command-skills.png",
+      "name": "command-skills",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:47.705Z",
+      "sha256": "a4f3f7b5ec8027df921e6d962f2e1a89c118a642e4042b765aa79113550bbe7c"
+    },
+    {
+      "file": "40-command-workers.png",
+      "name": "command-workers",
+      "note": "QA coordinator targets a closed loopback endpoint; no successful inference is claimed.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:48.170Z",
+      "sha256": "04785a543f3f93e54700711907d8670e4d8d3d82a2cd28899fbf345a7a10f260"
+    },
+    {
+      "file": "41-onboarding-persona.png",
+      "name": "onboarding-persona",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:55.475Z",
+      "sha256": "05d7b45e7e9949492c41e664c5ef312bd88ac77bd4710140806d89b43deb1e80"
+    },
+    {
+      "file": "42-onboarding-overview.png",
+      "name": "onboarding-overview",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:55.954Z",
+      "sha256": "bf0b33f0bc5c505ce12f1613dda3b0b599242b348e6a3f1ba7ce7ae97f8ab751"
+    },
+    {
+      "file": "43-onboarding-workspace.png",
+      "name": "onboarding-workspace",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:56.452Z",
+      "sha256": "818112e1453ae1267ee7a13d96ee4fee2eba9e49ae5ba68e62b544f003d9fef1"
+    },
+    {
+      "file": "44-onboarding-local-engine.png",
+      "name": "onboarding-local-engine",
+      "note": "Example inputs; Finish is not submitted.",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:57.243Z",
+      "sha256": "3dae42b0e7d5d2878e15ba87d04bb2372877fc285bd9a8dfaa384150cecefb10"
+    },
+    {
+      "file": "45-onboarding-repositories.png",
+      "name": "onboarding-repositories",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:57.661Z",
+      "sha256": "ff09c89853a73211cdb1598efce1f03980bf3d5528daa907171deac49ab74d10"
+    },
+    {
+      "file": "46-onboarding-permissions.png",
+      "name": "onboarding-permissions",
+      "note": "",
+      "width": 1440,
+      "height": 960,
+      "at": "2026-10-05T07:41:58.344Z",
+      "sha256": "fa8650489312bddf31c110d5513ce4991305e1a4f48abb46e5b33fae3b0bbd36"
+    }
+  ],
+  "errors": [],
+  "runtime": {
+    "name": "Zuri",
+    "version": "0.1.1",
+    "isPackaged": true,
+    "electron": "32.3.3"
+  },
+  "result": "PASS",
+  "completedAt": "2026-10-05T07:41:59.138Z",
+  "asarSha256": "6cc8da2631924f22bd32804c4788593bbed4b5436d17a7d2745eb95d271ff118"
+}

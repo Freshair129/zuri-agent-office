@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="32" viewBox="0 0 112 32" role="img" aria-label="Zuri">
+  <rect width="32" height="32" rx="8" fill="#E8820C"/>
+  <path d="M9 10h14L9 22h14" fill="none" stroke="#1F2937" stroke-width="3" stroke-linejoin="round"/>
+  <text x="41" y="24" fill="#B86A08" font-family="Segoe UI, sans-serif" font-size="26" font-weight="700">Zuri</text>
+</svg>

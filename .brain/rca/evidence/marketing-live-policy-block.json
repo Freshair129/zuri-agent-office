@@ -1,0 +1,52 @@
+{
+  "version": "0.1.0",
+  "investigationStatus": "PARTIAL_OPEN",
+  "sourceFile": "rollout-2026-10-05T07-42-40-01a10983-4524-7830-a4cc-7d6b3d8393bd.jsonl",
+  "extractionScope": "Two rejected startup calls and the intervening explicit approval in the current chat; no full transcript export",
+  "events": [
+    {
+      "callId": "call_AliKjgqxwdyYPG8ocQp9gK4s",
+      "callAt": "2026-10-05T13:10:49.527Z",
+      "rejectionAt": "2026-10-05T13:10:49.583Z",
+      "callLine": 6590,
+      "rejectionLine": 6592,
+      "callInputSha256": "9f080556b1592b1c8a878e044d6d3447305b440cc128ca328c09d4fdeec87c91",
+      "rejectionRecordSha256": "936d9c0fafa22684a3206091ffa9944205d776f02bca2d70cc029d22357e86e9",
+      "errorSignature": "exec_command failed: CreateProcess ... Rejected ... rejected: blocked by policy",
+      "ruleId": null,
+      "policyRationale": null
+    },
+    {
+      "callId": "call_2aAYMkioDOUzdCncgwkCkcwj",
+      "callAt": "2026-10-05T13:43:33.384Z",
+      "rejectionAt": "2026-10-05T13:43:33.537Z",
+      "callLine": 6636,
+      "rejectionLine": 6638,
+      "callInputSha256": "9f080556b1592b1c8a878e044d6d3447305b440cc128ca328c09d4fdeec87c91",
+      "rejectionRecordSha256": "160df2a7d985a6d553bf52631d96ec3a1b3ddeaeeaaa0600e41f5011abc408a9",
+      "errorSignature": "exec_command failed: CreateProcess ... Rejected ... rejected: blocked by policy",
+      "ruleId": null,
+      "policyRationale": null
+    }
+  ],
+  "identicalCallInputs": true,
+  "approval": {
+    "at": "2026-10-05T13:43:12.093Z",
+    "line": 6632,
+    "text": "approve"
+  },
+  "readOnlyRecheck": {
+    "checkedAt": "2026-10-05T15:45:14.1717976+00:00",
+    "qaListener11438": false,
+    "receiptHasServerOwnership": false,
+    "qaServerLogFilesPresent": false,
+    "defaultListenerPid": 19084,
+    "defaultOllamaVersion": "0.35.1",
+    "asarSha256": "582418d68c0799bdd92b2af716876e8d0c0a987d280694320f904e489100a706",
+    "localConfig": { "approval_policy": "never", "sandbox_mode": "danger-full-access" },
+    "inspectedLocalRuleFile": { "name": "rules/default.rules", "allowRules": 2, "explicitDenyRules": 0 },
+    "desktopLogSearch": { "dateDirectory": "2026/10/05", "filesSearched": 6, "exactCallIdMatches": 0 },
+    "policyTrigger": "UNKNOWN",
+    "liveAcceptance": "NOT_RUN"
+  }
+}

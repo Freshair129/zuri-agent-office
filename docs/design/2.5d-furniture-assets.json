@@ -1,0 +1,77 @@
+{
+  "assetVersion": "1.0.0",
+  "date": "2026-10-05",
+  "promptRecord": "2.5d-furniture-prompts.json",
+  "assets": [
+    {
+      "file": "desk.png",
+      "width": 1536,
+      "height": 1024,
+      "colorType": 6,
+      "bytes": 1788228,
+      "sha256": "75db7109588932eeaed1bc439c28a133373719e52aafcdbfcb52f61e516dd418",
+      "generatedBy": "built-in image_gen",
+      "sourceFileUnmodified": true
+    },
+    {
+      "file": "meeting.png",
+      "width": 1536,
+      "height": 1024,
+      "colorType": 6,
+      "bytes": 2188276,
+      "sha256": "dd4069d3436767ebdbde1a6bb19531c9f82625ae27fc16f3faf0092d12b77e10",
+      "generatedBy": "built-in image_gen",
+      "sourceFileUnmodified": true
+    },
+    {
+      "file": "counter.png",
+      "width": 1536,
+      "height": 1024,
+      "colorType": 6,
+      "bytes": 1994360,
+      "sha256": "ccccd7c16429528f9c4d7824d8824b4732b03962885e9cf4d4ee5017665228dd",
+      "generatedBy": "built-in image_gen",
+      "sourceFileUnmodified": true
+    },
+    {
+      "file": "cafe.png",
+      "width": 1536,
+      "height": 1024,
+      "colorType": 6,
+      "bytes": 2118823,
+      "sha256": "bb3e4a94f5b4a87827899e2371aa4088b9ebf026a7883fbae42672dcc1912add",
+      "generatedBy": "built-in image_gen",
+      "sourceFileUnmodified": true
+    },
+    {
+      "file": "sofa.png",
+      "width": 1536,
+      "height": 1024,
+      "colorType": 6,
+      "bytes": 2795959,
+      "sha256": "246996a11961382b1b9c527e195e139e8e8e30cccd8b496cab474c0fc41dbea6",
+      "generatedBy": "built-in image_gen",
+      "sourceFileUnmodified": true
+    },
+    {
+      "file": "plant.png",
+      "width": 1024,
+      "height": 1536,
+      "colorType": 6,
+      "bytes": 2155761,
+      "sha256": "c439d688c46a269019df9450d2bb7316e6fdd761ca2212ef50c667c3eafca992",
+      "generatedBy": "built-in image_gen",
+      "sourceFileUnmodified": true
+    },
+    {
+      "file": "floor-oak.png",
+      "width": 1254,
+      "height": 1254,
+      "colorType": 2,
+      "bytes": 2209558,
+      "sha256": "b62aa0def5ba9f1ce2a03ba2ac1a8a84f151a97e9321dde1440acd253030885d",
+      "generatedBy": "built-in image_gen",
+      "sourceFileUnmodified": true
+    }
+  ]
+}

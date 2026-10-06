@@ -1,0 +1,47 @@
+{
+  "snapshotVersion": "3.0.1",
+  "scope": "Actual packaged spawn/isolate/kill IPC and parent dependency preservation; local counter PTY, no model work",
+  "runnerSha256": "2c897aa64036d4d952fe63d83774a8ad76f5626ca0238433ac2b16097b5a46f9",
+  "source": "9572b5ac1da6019f0cfa97af0c647e62f6e07b7a",
+  "asarSha256": "a0e62ff27cce98f7f8efbf4e800694921c38fd1857629f97c31595222092cfcf",
+  "startedAt": "2026-10-05T11:08:09.194Z",
+  "checks": {
+    "spawned": {
+      "ok": true,
+      "cwd": "O:\\testzuri\\zuri-agent-office\\output\\playwright\\stabilization-1791198487795\\repo\\worktrees\\pty-worktree-verification",
+      "worktreePath": "O:\\testzuri\\zuri-agent-office\\output\\playwright\\stabilization-1791198487795\\repo\\worktrees\\pty-worktree-verification"
+    },
+    "parentSentinelBefore": "c390896fc229b49aa91ebd9f38334579bf946816e92bb8a30fe311a65a42d18e",
+    "counterPackets": 3,
+    "worktreeRemoved": true,
+    "parentSentinelAfter": "c390896fc229b49aa91ebd9f38334579bf946816e92bb8a30fe311a65a42d18e",
+    "remainingPtys": []
+  },
+  "screens": [
+    {
+      "file": "01-isolated-counter-running.png",
+      "sha256": "310d631759994a0d0169a023c6c74c5243ce2f1956bfd98dbc344dda54045d65"
+    },
+    {
+      "file": "02-after-managed-teardown.png",
+      "sha256": "4b8ddb25e01d469fd542d9b5c9b8581dab5dea9e139239644c366193aec4e6a0"
+    }
+  ],
+  "errors": [],
+  "runtime": {
+    "version": "0.3.1",
+    "packaged": true,
+    "electron": "32.3.3"
+  },
+  "result": "PASS",
+  "completedAt": "2026-10-05T11:08:18.111Z",
+  "asarSha256AtCompletion": "a0e62ff27cce98f7f8efbf4e800694921c38fd1857629f97c31595222092cfcf",
+  "videos": [
+    {
+      "file": "video/page@7d279ddd06aa2751fc418e4bea349487.webm",
+      "sha256": "c3afc0f4713c14bb709d8eb76653442a561e98e31a8d7b3b911aaad66f22bfca"
+    }
+  ],
+  "buildInputsSha256": "e27312b2378519531fd71cdc2a29fbcbc88bf763dcf68b63ee57cdf3296d7392",
+  "sourceNote": "Baseline commit plus approved stabilization changes; exact packaged inputs pinned by stabilization-build-inputs.json."
+}

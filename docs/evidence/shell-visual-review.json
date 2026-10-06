@@ -1,0 +1,188 @@
+{
+  "result": "PASS",
+  "snapshotVersion": "4.0.0",
+  "appVersion": "0.4.0",
+  "reviewedAt": "2026-10-05T11:43:26.697Z",
+  "manifestSha256": "d32ef23d329e573dae4d97f1c940113a27e2861d7c8346fa414295e45c0ef8c0",
+  "asarSha256": "e886533f83f40fd424855983990fc70cadfd85aceb45738427bcb4dc118e2abc",
+  "sourceInputsSha256": "1ef59469ab47cf0d6d7dba3c81ae4e6acce5df0862b3f1a1c3ef829fe8ed1048",
+  "reference": {
+    "file": "docs\\design\\zuri-2.5d-concept-01.png",
+    "sha256": "eb26e90b59b6c7dc48f3e49dc9d363f12c3c2af28f7b6f9a8412972a79f8f37f"
+  },
+  "shellReference": {
+    "file": "docs\\design\\zuri-office-shell-reference.png",
+    "sha256": "408a0f4cf3d33eb049c36148515ed67a740b43d2b54f387a8b3a3e0560c29fec"
+  },
+  "reviewers": [
+    "ATHER lead: original scene, wide/light, 1100 overlay/closed, critical state, tasks, meeting glass, settings and onboarding",
+    "UI peer: original 1440/1280/1100 light/dark, compact roster, selection/attention, five coordinator routes, unsent prerequisite seed, 16/17 static seating"
+  ],
+  "reviewedScreens": [
+    {
+      "file": "13-shell-1-expanded-roster.png",
+      "sha256": "7a64e3b41fe2e138ff2dcf7f2f7267cf85326b6e4face7b02b32fb549620433d"
+    },
+    {
+      "file": "14-shell-1-drawer-open-light-1440x960.png",
+      "sha256": "a6f3ab3459d1f8abd08ccd99804c156aac7a13b6b8c5faa0be261de3d72ca0dc"
+    },
+    {
+      "file": "15-shell-1-drawer-open-dark-1440x960.png",
+      "sha256": "2613c0861fedab2cfa63aa5d9d8e2ad77441fc9ddd16f8875356b835d1715175"
+    },
+    {
+      "file": "16-shell-1-drawer-closed-1440x960.png",
+      "sha256": "f590339acbb8afbaa88adcc834893fdd6bf140e5961a732de8a2a5d95796daba"
+    },
+    {
+      "file": "18-shell-1-drawer-open-light-1280x800.png",
+      "sha256": "68b85bd36d5752f561387d7baa60426cea754892c0aa133ef59914553c7d7bbf"
+    },
+    {
+      "file": "19-shell-1-drawer-open-dark-1280x800.png",
+      "sha256": "8978f348900e53c4ad03980f7b54b474efca91030ffadbd0b635f911475aecbf"
+    },
+    {
+      "file": "20-shell-1-drawer-closed-1280x800.png",
+      "sha256": "0bdedd657eec1ce919f561930216fcb367a7786dc0a8cf709be4a88423cd2887"
+    },
+    {
+      "file": "22-shell-1-drawer-open-light-1100x760.png",
+      "sha256": "a3be6546ceaa439f72832cceef2bce9e585cb45e6ac3ed5688e286bcc7a99ce1"
+    },
+    {
+      "file": "23-shell-1-drawer-open-dark-1100x760.png",
+      "sha256": "da92d3a2dbfa9389d4d9c2d4dfca912a5c164c80ca7b4a00b929f06c144b55d2"
+    },
+    {
+      "file": "24-shell-1-drawer-closed-1100x760.png",
+      "sha256": "35c4bcefdad51bb259e61fb805378c0411850b6cf23d2b9572bf6ea4a03aaff9"
+    },
+    {
+      "file": "36-fixture-16-synthetic-seated.png",
+      "sha256": "f7f991bee6e9a3fb3ba56d10a66434eab4a22f1d272bcc5f64fc58d505bd3f28"
+    },
+    {
+      "file": "37-fixture-16-synthetic-seated-front-detail.png",
+      "sha256": "6a34e45ba505f21efe9f71691e4df3e3a05c11518b99c9f86560e299a4c990d8"
+    },
+    {
+      "file": "38-fixture-16-synthetic-seated-back-detail.png",
+      "sha256": "78b76be20c9b31dfacaeafd24310097ad4c7dc6daaa00ed9c9156b66d6184f1c"
+    },
+    {
+      "file": "41-fixture-16-selected-and-critical-thoughts.png",
+      "sha256": "456d77fefdbef17ed3254af709e862f69e6da10d5eecbd31c45c18ad0de1a531"
+    },
+    {
+      "file": "43-shell-16-drawer-open-light-1440x960.png",
+      "sha256": "0781715d986cb9468643c15770b82368c95088948ae940029a9a31c72eba3898"
+    },
+    {
+      "file": "51-shell-16-drawer-open-light-1100x760.png",
+      "sha256": "81146e0fe4c99f216e4700bfcb4b3e37c3af527e17479c827e4e0b0e6f7a5f94"
+    },
+    {
+      "file": "52-shell-16-drawer-open-dark-1100x760.png",
+      "sha256": "155a4730f461d9b6cb09fcc74f46fbd471885aed4c7376869e3adc8662353299"
+    },
+    {
+      "file": "53-shell-16-drawer-closed-1100x760.png",
+      "sha256": "942cd57bd5ad1eb74d5092ec6c8cb287e57045994289b651d01660df8bf654dd"
+    },
+    {
+      "file": "57-shell-navigation-tasks.png",
+      "sha256": "89b8a0f763609f95dfd1571e5eb2b89b0829a0174f99a5a12fdf0feb6505f3c3"
+    },
+    {
+      "file": "58-shell-navigation-ask-me.png",
+      "sha256": "49ac466c3c7124b350f0a13cb8282fcf5a743c4e5657a2f8fcf93002b6cd596b"
+    },
+    {
+      "file": "59-shell-navigation-team.png",
+      "sha256": "f4975ca26f165e9ebd883caca25f06d1cd7331c403e89dea88e41fcb62e0bbc7"
+    },
+    {
+      "file": "60-shell-navigation-memory.png",
+      "sha256": "8e13b7d02d9b313e44e76eeea9f6a1079d401d823ef013c4b80718a0e4bda1fe"
+    },
+    {
+      "file": "61-shell-navigation-activity.png",
+      "sha256": "e09576adbe0c5da0b458fed50d88a9456172842684bfe12e2b22da9648915b86"
+    },
+    {
+      "file": "62-shell-prerequisite-unsent-dispatch-seed.png",
+      "sha256": "edae84a39bc9b1839e572c99b4ffee5ca6703d89c637569315134a8128da3d11"
+    },
+    {
+      "file": "64-fixture-17-synthetic-seated.png",
+      "sha256": "e790abbe1c2a789abcb9f45688650fb07bf819fa95156c4bdd0a06fcb09b8c3a"
+    },
+    {
+      "file": "65-fixture-17-meeting-glass-detail.png",
+      "sha256": "3da2e0296d8d5c7e09431217f1ab00a96655268d5a2e454c1d83f8cce1cb4d41"
+    },
+    {
+      "file": "82-settings-general.png",
+      "sha256": "d2f898ad909cbaa24893eaf60e2511590627bd75b183475dd01f2a91eac7fe12"
+    },
+    {
+      "file": "109-onboarding-local-engine.png",
+      "sha256": "1d9002d35af82580f0277ead05a404d808237b2713a03dc8ce9f4b71cbee8123"
+    },
+    {
+      "file": "111-onboarding-permissions.png",
+      "sha256": "25a5bcf7887af6863e5b0a38d41f80896da04d2fa750884d4e9b113cc1516839"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion": "Functional navigation, readable shell and compact roster hierarchy",
+      "result": "PASS"
+    },
+    {
+      "criterion": "Actual 1100 overlay and closed scene, controls within viewport",
+      "result": "PASS"
+    },
+    {
+      "criterion": "Selected and important attention thoughts reduce routine clutter",
+      "result": "PASS"
+    },
+    {
+      "criterion": "Existing reference room, four pods, front/rear seats and meeting-glass occupant preserved",
+      "result": "PASS"
+    },
+    {
+      "criterion": "Principal settings/onboarding remain usable in their existing scrollable panels",
+      "result": "PASS"
+    }
+  ],
+  "regression": {
+    "tests": 999,
+    "pass": 979,
+    "fail": 0,
+    "skip": 20,
+    "notes": "Six of the skips are unsupported Windows file-symlink cases; fourteen are existing platform skips. No skip is counted as PASS."
+  },
+  "limitations": [
+    "Static review does not certify every gait/hand/ambient frame or all mixed-status combinations.",
+    "English packaged UI captures and locale key/placeholder tests are not translation or full locale visual certification.",
+    "One real local counter PTY plus controlled display/status fixtures; no live-model completion acceptance.",
+    "Files action uses a real fixture file with controlled one-shot native picker return; native OS picker behavior is not accepted.",
+    "Installer generation is not installation, signing or deployment acceptance.",
+    "Existing General update copy still mentions automatic six-hour checks despite the manual-only edition; this pre-existing text was not changed by the shell."
+  ],
+  "preservedAttempts": [
+    {
+      "directory": "after-1791199656445",
+      "result": "NOT_ACCEPTED",
+      "reason": "Locale parity candidate rejected; native window clamp also invalidated narrow-width measurement."
+    },
+    {
+      "directory": "after-1791200040587",
+      "result": "NOT_ACCEPTED",
+      "reason": "QA expected internal blocked token rather than actual needs-you label; same final binary, incomplete capture."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  { "direction": "down", "back": false, "mirror": true },
+  { "direction": "up", "back": true, "mirror": true },
+  { "direction": "right", "back": false, "mirror": false },
+  { "direction": "left", "back": true, "mirror": false }
+]

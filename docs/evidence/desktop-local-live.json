@@ -1,0 +1,163 @@
+{
+  "scope": "Actual packaged Electron Zuri worker session; read-only extraction of this exact QA directory/session only",
+  "sourceDatabase": "C:/Users/freshair/.local/share/opencode/opencode.db",
+  "selection": {
+    "directory": "O:/testzuri/zuri-agent-office/output/playwright/hive",
+    "sessionId": "ses_ef65eb9f4ffeJMIh75PTs0pfof",
+    "agentId": "qa-reader-muuk5gjn"
+  },
+  "session": {
+    "id": "ses_ef65eb9f4ffeJMIh75PTs0pfof",
+    "directory": "O:/testzuri/zuri-agent-office/output/playwright/hive",
+    "title": "QA Reader agent protocol setup",
+    "version": "1.18.34",
+    "time_created": 1791162926603,
+    "time_updated": 1791163207776
+  },
+  "runtime": {
+    "cli": "OpenCode 1.18.34",
+    "server": "Ollama 0.35.1",
+    "model": "qwen3.5:4b",
+    "baseUrl": "http://127.0.0.1:11437/v1",
+    "serverContextTokens": 16384
+  },
+  "results": {
+    "firstTask": {
+      "result": "PASS",
+      "readCompleted": true,
+      "exactFinalReply": true,
+      "expected": "ZURI_DESKTOP_READ_PROOF_7d319c"
+    },
+    "secondTask": {
+      "result": "PARTIAL",
+      "readCompleted": true,
+      "finalReplyContainsExpected": false,
+      "expected": "ZURI_E2E_a93f02c71e",
+      "limitation": "Read tool completed; no final assistant text containing the second nonce was present at extraction."
+    },
+    "initialWrongPathRead": {
+      "result": "FAIL",
+      "retainedInEvents": true,
+      "limitation": "The first read targeted the agent directory and returned file not found before a later absolute-path read succeeded."
+    }
+  },
+  "events": [
+    {
+      "partId": "prt_109a33b4a001Lq6EUd9veRY1Lj",
+      "createdAt": 1791163054922,
+      "updatedAt": 1791163054936,
+      "providerID": "local",
+      "modelID": "qwen3.5:4b",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_r4mxy9dl",
+        "state": {
+          "status": "error",
+          "input": {
+            "filePath": "O:\\testzuri\\zuri-agent-office\\output\\playwright\\hive\\hive\\agents\\qa-reader-muuk5gjn\\proof.txt",
+            "limit": 10000
+          },
+          "error": "File not found: O:\\testzuri\\zuri-agent-office\\output\\playwright\\hive\\hive\\agents\\qa-reader-muuk5gjn\\proof.txt",
+          "time": {
+            "start": 1791163054927,
+            "end": 1791163054934
+          }
+        }
+      }
+    },
+    {
+      "partId": "prt_109a415d8001Ez8AYRoLeGhmhl",
+      "createdAt": 1791163110872,
+      "updatedAt": 1791163110890,
+      "providerID": "local",
+      "modelID": "qwen3.5:4b",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_izmj8xhi",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "O:/testzuri/zuri-agent-office/output/playwright/hive/proof.txt",
+            "limit": 10000
+          },
+          "output": "<path>O:\\testzuri\\zuri-agent-office\\output\\playwright\\hive\\proof.txt</path>\n<type>file</type>\n<content>\n1: ZURI_DESKTOP_READ_PROOF_7d319c\n\n(End of file - total 1 lines)\n</content>",
+          "metadata": {
+            "preview": "ZURI_DESKTOP_READ_PROOF_7d319c",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "O:\\testzuri\\zuri-agent-office\\output\\playwright\\hive\\proof.txt",
+              "text": "ZURI_DESKTOP_READ_PROOF_7d319c",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "totalLines": 1,
+              "truncated": false
+            }
+          },
+          "title": "output\\playwright\\hive\\proof.txt",
+          "time": {
+            "start": 1791163110879,
+            "end": 1791163110889
+          }
+        }
+      }
+    },
+    {
+      "partId": "prt_109a4435e0013J76sg7WQFLNOV",
+      "createdAt": 1791163122526,
+      "updatedAt": 1791163122735,
+      "providerID": "local",
+      "modelID": "qwen3.5:4b",
+      "part": {
+        "type": "text",
+        "text": "ZURI_DESKTOP_READ_PROOF_7d319c",
+        "time": {
+          "start": 1791163122526,
+          "end": 1791163122734
+        }
+      }
+    },
+    {
+      "partId": "prt_109a56081001NbyEZUxPc7oKpb",
+      "createdAt": 1791163195522,
+      "updatedAt": 1791163195542,
+      "providerID": "local",
+      "modelID": "qwen3.5:4b",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_78uptoyi",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "O:/testzuri/zuri-agent-office/output/playwright/hive/proof-final.txt",
+            "limit": 10000
+          },
+          "output": "<path>O:\\testzuri\\zuri-agent-office\\output\\playwright\\hive\\proof-final.txt</path>\n<type>file</type>\n<content>\n1: ZURI_E2E_a93f02c71e\n\n(End of file - total 1 lines)\n</content>",
+          "metadata": {
+            "preview": "ZURI_E2E_a93f02c71e",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "O:\\testzuri\\zuri-agent-office\\output\\playwright\\hive\\proof-final.txt",
+              "text": "ZURI_E2E_a93f02c71e",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "totalLines": 1,
+              "truncated": false
+            }
+          },
+          "title": "output\\playwright\\hive\\proof-final.txt",
+          "time": {
+            "start": 1791163195529,
+            "end": 1791163195541
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "appVersion": "0.4.0",
+  "sourceInputsSha256": "1ef59469ab47cf0d6d7dba3c81ae4e6acce5df0862b3f1a1c3ef829fe8ed1048",
+  "method": "electron-builder --prepackaged from the exact tested unpacked directory; unsigned development artifacts; installation not tested",
+  "artifacts": [
+    {
+      "file": "win-unpacked/resources/app.asar",
+      "bytes": 263979004,
+      "sha256": "e886533f83f40fd424855983990fc70cadfd85aceb45738427bcb4dc118e2abc"
+    },
+    {
+      "file": "Zuri-0.4.0-win-x64-setup.exe",
+      "bytes": 138944849,
+      "sha256": "7da0723132f15339fa84665a2ff5d1e44436272fdb67b1507d44ef6779bc3a0a"
+    },
+    {
+      "file": "Zuri-0.4.0-win-x64-portable.exe",
+      "bytes": 138721085,
+      "sha256": "f33f6aae758c03e27cf5e17f0ac1157120e4d390b67ac19cb0c13433b65180ca"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewedAt": "2026-10-05T10:17:04.3073044Z",
+  "reviewers": [
+    "root",
+    "ui_brand"
+  ],
+  "source": "Explicit independent UI review and lead visual decision",
+  "result": "PASS",
+  "acceptance": "BOUNDED_VISUAL_PASS",
+  "effectiveGate": "PASS: mechanical capture plus explicit bounded visual review",
+  "asarSha256": "bc1686b17e17a5145313fd25db4cfeb379a6b5e20857bdd3db0c763b66f6ccb0",
+  "manifestSha256": "128c60b5511055c3e96b37e6c40ced2fee540c3c5e86939d3ad16869d9eb80f8",
+  "gates": {
+    "environmentReferenceFidelity": "PASS",
+    "seatedNorthSouthAnatomy": "PASS",
+    "meetingGlassOccupantVisibility": "PASS"
+  },
+  "findings": [
+    "Reference composition and camera match the approved room.",
+    "Static 1/16 north/south seated anatomy has credible heads, shoulders and hips, anchored feet and coherent chair masks.",
+    "No actionable static clipping, floating or excessive scale remains in reviewed poses.",
+    "The 17th displayed agent remains visible behind meeting-room mullions, tint, table and chair."
+  ],
+  "evidence": [
+    "09-fixture-1-synthetic-seated.png",
+    "10-fixture-1-synthetic-seated-front-detail.png",
+    "21-fixture-16-synthetic-seated.png",
+    "22-fixture-16-synthetic-seated-front-detail.png",
+    "23-fixture-16-synthetic-seated-back-detail.png",
+    "24-fixture-16-actual-scene.png",
+    "28-fixture-17-meeting-glass-detail.png"
+  ],
+  "exclusions": [
+    "Gait and hand effects",
+    "All lounge poses",
+    "Live LLM/provider execution",
+    "General performance acceptance beyond recorded measurements"
+  ],
+  "knownLimitations": [
+    "Three anatomy families with five visual variants each",
+    "Compact pose cycles"
+  ],
+  "rawManifestNote": "Raw referenceFidelityReview remains NOT_REVIEWED and raw acceptance remains NOT_ACCEPTED because automated capture cannot issue a visual verdict. This hash-bound sidecar records the subsequent human-directed team visual decision without altering the raw manifest."
+}

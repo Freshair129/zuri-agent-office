@@ -1,0 +1,33 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { MotionConfig } from 'motion/react';
+import { App } from './App';
+import brandLogo from '@/assets/zuri-mark.svg?url';
+import './design/global.css';
+import './i18n';
+
+const favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.type = 'image/svg+xml';
+favicon.href = brandLogo;
+document.head.appendChild(favicon);
+
+const splashMark = document.querySelector('#cth-splash .mk');
+if (splashMark) {
+  const img = document.createElement('img');
+  img.src = brandLogo;
+  img.alt = 'Zuri';
+  img.style.cssText = 'height:56px;width:auto;display:block';
+  splashMark.replaceWith(img);
+}
+
+const root = document.getElementById('root');
+if (!root) throw new Error('No root element');
+
+createRoot(root).render(
+  <StrictMode>
+    <MotionConfig reducedMotion="user">
+      <App />
+    </MotionConfig>
+  </StrictMode>
+);

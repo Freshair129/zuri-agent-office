@@ -1,0 +1,17 @@
+{
+  "michael": { "base": 0, "garment": "#9b7040" },
+  "jim": { "base": 0, "garment": "#506e96" },
+  "pam": { "base": 1, "garment": "#64735a" },
+  "dwight": { "base": 0, "garment": "#64735a" },
+  "kevin": { "base": 2, "garment": "#506e96" },
+  "angela": { "base": 1, "garment": "#796371" },
+  "oscar": { "base": 2, "garment": "#796371" },
+  "stanley": { "base": 2, "garment": "#4a535a" },
+  "phyllis": { "base": 1, "garment": "#506e96" },
+  "andy": { "base": 0, "garment": "#796371" },
+  "kelly": { "base": 1, "garment": "#9b7040" },
+  "ryan": { "base": 0, "garment": "#4a535a" },
+  "toby": { "base": 2, "garment": "#64735a" },
+  "creed": { "base": 2, "garment": "#9b7040" },
+  "meredith": { "base": 1, "garment": "#4a535a" }
+}

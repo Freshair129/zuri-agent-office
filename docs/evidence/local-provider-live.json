@@ -1,0 +1,117 @@
+{
+  "scope": "Standalone OpenCode CLI with real local Ollama inference; separate from desktop/Hive acceptance",
+  "result": "PASS",
+  "cli": "OpenCode 1.18.34",
+  "server": "Ollama 0.35.1",
+  "model": "qwen3.5:4b",
+  "baseUrl": "http://127.0.0.1:11437/v1",
+  "contextTokens": 16384,
+  "autoMode": false,
+  "cloudDisabled": true,
+  "sourceLog": "node_modules/.zuri-provider-qa/live-cli-4b-16k.jsonl",
+  "events": [
+    {
+      "type": "tool_use",
+      "timestamp": 1791162803364,
+      "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_6kfndhqc",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "O:\\testzuri\\zuri-agent-office\\node_modules\\.zuri-provider-qa\\workspace\\proof.txt"
+          },
+          "output": "<path>O:\\testzuri\\zuri-agent-office\\node_modules\\.zuri-provider-qa\\workspace\\proof.txt</path>\n<type>file</type>\n<content>\n1: ZURI_LOCAL_TOOL_PROOF_20261005\n\n(End of file - total 1 lines)\n</content>",
+          "metadata": {
+            "preview": "ZURI_LOCAL_TOOL_PROOF_20261005",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "O:\\testzuri\\zuri-agent-office\\node_modules\\.zuri-provider-qa\\workspace\\proof.txt",
+              "text": "ZURI_LOCAL_TOOL_PROOF_20261005",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "totalLines": 1,
+              "truncated": false
+            }
+          },
+          "title": "node_modules\\.zuri-provider-qa\\workspace\\proof.txt",
+          "time": {
+            "start": 1791162803338,
+            "end": 1791162803360
+          }
+        },
+        "id": "prt_1099f6480001NM4Y81g95tlU1t",
+        "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+        "messageID": "msg_1099eccfe001KqT9QknhdyB9To"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1791162803599,
+      "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+      "part": {
+        "id": "prt_1099f6580001ZHCAd73buq5o4S",
+        "reason": "tool-calls",
+        "snapshot": "ec7615f4f67ddc56987cf1cddcb7764b03d17384",
+        "messageID": "msg_1099eccfe001KqT9QknhdyB9To",
+        "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+        "type": "step-finish",
+        "tokens": {
+          "total": 7676,
+          "input": 7589,
+          "output": 87,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1791162817874,
+      "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+      "part": {
+        "id": "prt_1099f9b71001Ebgsp4K74QUaKd",
+        "messageID": "msg_1099f664c001AAROBTCuCPWTRJ",
+        "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+        "type": "text",
+        "text": "ZURI_LOCAL_TOOL_PROOF_20261005",
+        "time": {
+          "start": 1791162817393,
+          "end": 1791162817870
+        }
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1791162818085,
+      "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+      "part": {
+        "id": "prt_1099f9e18001eJU9GxooVQPqNc",
+        "reason": "stop",
+        "snapshot": "ec7615f4f67ddc56987cf1cddcb7764b03d17384",
+        "messageID": "msg_1099f664c001AAROBTCuCPWTRJ",
+        "sessionID": "ses_ef66136a9ffehE6Fp7lqe6Y0j9",
+        "type": "step-finish",
+        "tokens": {
+          "total": 7778,
+          "input": 7727,
+          "output": 51,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "cost": 0
+      }
+    }
+  ]
+}
